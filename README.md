@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+# Paignton Cricket Club Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the official website for [Paignton Cricket Club](https://paigntoncricketclub.co.uk), built using React and deployed as a static site to AWS S3 with CloudFront CDN for performance and scalability.
 
-## Available Scripts
+## 🚀 Live Site
+👉 [https://paigntoncricketclub.co.uk](https://paigntoncricketclub.co.uk)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🛠 Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React** + **TypeScript**
+- **React Router** for page navigation
+- **Bootstrap** for UI styling
+- **Decap CMS** (formerly Netlify CMS) for content management via GitHub
+- **GitHub Actions** for CI/CD
+- **S3 + CloudFront** for static hosting and global delivery
+- **Google Analytics** for tracking site activity
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## ✍️ Content Editing (CMS)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The website includes an integrated CMS at:
 
-### `npm run build`
+```
+https://paigntoncricketclub.co.uk/admin
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Editors can log in using their GitHub accounts.
+- Content updates are written directly to the GitHub repository or via pull requests (depending on config).
+- Posts for the homepage are saved as individual JSON files and automatically displayed on the site.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📦 Development
 
-### `npm run eject`
+### Requirements
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Node.js 18+
+- Yarn or npm
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Setup
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+cd paigntoncc
+npm install
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Environment Variables
 
-## Learn More
+Create a `.env` file at the root of your project:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```env
+REACT_APP_GA_TRACKING_ID=UA-XXXXXXXXX-X
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+> Do **not** commit `.env` to version control.
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Run Dev Server
 
-### Analyzing the Bundle Size
+```bash
+npm run dev
+# or
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 🛡️ Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Deploys are triggered automatically on push to `main` using GitHub Actions:
 
-### Advanced Configuration
+- `npm run build` is executed
+- The output is uploaded to AWS S3
+- CloudFront cache is invalidated
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Secrets for deployment (e.g., AWS keys, CloudFront distribution ID) are managed in **GitHub Secrets**.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📄 License
 
-### `npm run build` fails to minify
+This project is maintained by Paignton Cricket Club. Please contact the club directly if you’d like to contribute or suggest updates.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+Made with 🏏 and ☀️ in Paignton, Devon
