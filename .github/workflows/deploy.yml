@@ -32,8 +32,8 @@ jobs:
           AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: 'us-east-1'  # change to your region
-          SOURCE_DIR: 'dist'  # or 'build' depending on your project
+          AWS_REGION: 'eu-west-2'
+          SOURCE_DIR: 'build'
         
       - name: Invalidate CloudFront Cache
         run: |
@@ -43,5 +43,4 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: 'us-east-1'  # same region as your CloudFront origin
 
