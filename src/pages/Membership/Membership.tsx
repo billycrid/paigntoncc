@@ -24,124 +24,124 @@ export const Membership = () => {
       <div className="entry-content">
         <div className="row">
           <div className="col-md-7">
-          <div>
-          <h3 style={{ textDecoration: "underline" }}>
-            Subscriptions and Membership – {new Date().getFullYear()}
-          </h3>
-          <table>
-            <tr>
-              <th>
-                <strong>CATEGORY</strong>
-              </th>
-              <th>
-                <strong>PRICE</strong>
-              </th>
-            </tr>
-            <tr>
-              <td>Senior/Vice President & Family</td>
-              <td>£50</td>
-            </tr>
-            <tr>
-              <td>Player & Family</td>
-              <td>£130</td>
-            </tr>
-            <tr>
-              <td>Player</td>
-              <td>£100</td>
-            </tr>
-            <tr>
-              <td>Lady Hardball Player</td>
-              <td>£50</td>
-            </tr>
-            <tr>
-              <td>Lady Softball</td>
-              <td>£30</td>
-            </tr>
-            <tr>
-              <td>Lady Wine and Wickets</td>
-              <td>£10</td>
-            </tr>
-            <tr>
-              <td>Social Member</td>
-              <td>£10</td>
-            </tr>
-            <tr>
-              <td>Life Member</td>
-              <td>£400</td>
-            </tr>
-          </table>
-          <br />
-          <h4 style={{ textDecoration: "underline" }}>
-            Youth Section – hardball colts
-          </h4>
-          <table>
-            <tr>
-              <th>
-                <strong>CATEGORY</strong>
-              </th>
-              <th>
-                <strong>PRICE</strong>
-              </th>
-            </tr>
-            <tr>
-              <td>2+ Colts & (non-playing) Family</td>
-              <td>£80</td>
-            </tr>
-            <tr>
-              <td>1 Colt & (non-playing) Family</td>
-              <td>£60</td>
-            </tr>
-            <tr>
-              <td>Student/Apprentice</td>
-              <td>£60</td>
-            </tr>
-          </table>
-          <br />
-          <h4 style={{ textDecoration: "underline" }}>
-            Youth Section – softball juniors
-          </h4>
-          <table>
-            <tr>
-              <th>
-                <strong>CATEGORY</strong>
-              </th>
-              <th>
-                <strong>PRICE</strong>
-              </th>
-            </tr>
-            <tr>
-              <td>2+ Juniors & Family (non-playing)</td>
-              <td>£60</td>
-            </tr>
-            <tr>
-              <td>1 Junior & Family (non-playing)</td>
-              <td>£40</td>
-            </tr>
-          </table>
-          <br/>
-          <div>
-            <small>
-              <span style={{ textDecoration: "underline", fontWeight: "bold" }}>
-                Colts
-              </span>{" "}
-              are under-18s and involved in playing in one of the club’s
-              hardball youth teams.
+            <div>
+              <h3 style={{ textDecoration: "underline" }}>
+                Subscriptions and Membership – {new Date().getFullYear()}
+              </h3>
+              <table>
+                <tr>
+                  <th>
+                    <strong>CATEGORY</strong>
+                  </th>
+                  <th>
+                    <strong>PRICE</strong>
+                  </th>
+                </tr>
+                <tr>
+                  <td>Senior/Vice President & Family</td>
+                  <td>£50</td>
+                </tr>
+                <tr>
+                  <td>Player & Family</td>
+                  <td>£130</td>
+                </tr>
+                <tr>
+                  <td>Player</td>
+                  <td>£100</td>
+                </tr>
+                <tr>
+                  <td>Lady Hardball Player</td>
+                  <td>£50</td>
+                </tr>
+                <tr>
+                  <td>Lady Softball</td>
+                  <td>£30</td>
+                </tr>
+                <tr>
+                  <td>Lady Wine and Wickets</td>
+                  <td>£10</td>
+                </tr>
+                <tr>
+                  <td>Social Member</td>
+                  <td>£10</td>
+                </tr>
+                <tr>
+                  <td>Life Member</td>
+                  <td>£400</td>
+                </tr>
+              </table>
               <br />
-              <span style={{ textDecoration: "underline", fontWeight: "bold" }}>
-                Juniors
-              </span>{" "}
-              are under-11 softballers attending Friday evening sessions.
+              <h4 style={{ textDecoration: "underline" }}>
+                Youth Section – hardball colts
+              </h4>
+              <table>
+                <tr>
+                  <th>
+                    <strong>CATEGORY</strong>
+                  </th>
+                  <th>
+                    <strong>PRICE</strong>
+                  </th>
+                </tr>
+                <tr>
+                  <td>2+ Colts & (non-playing) Family</td>
+                  <td>£80</td>
+                </tr>
+                <tr>
+                  <td>1 Colt & (non-playing) Family</td>
+                  <td>£60</td>
+                </tr>
+                <tr>
+                  <td>Student/Apprentice</td>
+                  <td>£60</td>
+                </tr>
+              </table>
               <br />
-              If a 2+ youth membership is a mix of colts and juniors, please
-              join the colts category.
+              <h4 style={{ textDecoration: "underline" }}>
+                Youth Section – softball juniors
+              </h4>
+              <table>
+                <tr>
+                  <th>
+                    <strong>CATEGORY</strong>
+                  </th>
+                  <th>
+                    <strong>PRICE</strong>
+                  </th>
+                </tr>
+                <tr>
+                  <td>2+ Juniors & Family (non-playing)</td>
+                  <td>£60</td>
+                </tr>
+                <tr>
+                  <td>1 Junior & Family (non-playing)</td>
+                  <td>£40</td>
+                </tr>
+              </table>
               <br />
-              <span style={{ textDecoration: "underline", fontWeight: "bold" }}>
-                Students/Apprentice
-              </span>{" "}
-              category applies up to Year 13.
-            </small>
-          </div>
-        </div>
+              <div>
+                <small>
+                  <span style={{ textDecoration: "underline", fontWeight: "bold" }}>
+                    Colts
+                  </span>{" "}
+                  are under-18s and involved in playing in one of the club’s
+                  hardball youth teams.
+                  <br />
+                  <span style={{ textDecoration: "underline", fontWeight: "bold" }}>
+                    Juniors
+                  </span>{" "}
+                  are under-11 softballers attending Friday evening sessions.
+                  <br />
+                  If a 2+ youth membership is a mix of colts and juniors, please
+                  join the colts category.
+                  <br />
+                  <span style={{ textDecoration: "underline", fontWeight: "bold" }}>
+                    Students/Apprentice
+                  </span>{" "}
+                  category applies up to Year 13.
+                </small>
+              </div>
+            </div>
           </div>
           <div className="col-md-5">
             <a
@@ -154,17 +154,17 @@ export const Membership = () => {
                 CLICK HERE TO JOIN/RENEW
               </h5>
             </a>
-            <br/>
-            <br/>
-            <hr/>
-              <img alt="PCC Colts 2023" style={{width: '100%'}} src={colts}/>
-            <br/>
-            <br/>
-            <hr/>
-              <img alt="PCC Ladies Softball" style={{width: '100%'}} src={softball}/>
+            <br />
+            <br />
+            <hr />
+            <img alt="PCC Colts 2023" style={{ width: '100%' }} src={colts} />
+            <br />
+            <br />
+            <hr />
+            <img alt="PCC Ladies Softball" style={{ width: '100%' }} src={softball} />
           </div>
         </div>
-        
+
         <p>
           <br />
           <strong>
@@ -182,7 +182,7 @@ export const Membership = () => {
           <br />
           <br />
           Payment is made securely via PayPal and you are able to use your
-          credit card or debit card. 
+          credit card or debit card.
           <br />
           <br />
           <strong>
