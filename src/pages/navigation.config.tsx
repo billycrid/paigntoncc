@@ -7,7 +7,6 @@ import { Teams } from './Teams/Teams.tsx';
 import { Contact } from "./Contact/Contact.tsx";
 import { ClubHire } from "./ClubHire/ClubHire.tsx";
 import { Membership } from "./Membership/Membership.tsx";
-import { Matches } from "./Matches/Matches.tsx";
 
 interface INavigationConfig {
     name: string;
