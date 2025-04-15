@@ -17,5 +17,5 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Headline", name: "headline", widget: "string" }
-      - { label: "Intro Text", name: "intro", widget: "text" }
-      - { label: "CTA Link", name: "cta_link", widget: "string" }
+      - { label: "Content", name: "intro", widget: "markdown" }
+      - { label: "Content Header link", name: "cta_link", widget: "string" }

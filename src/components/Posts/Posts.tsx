@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import ReactMarkdown from 'react-markdown';
 
 export const Posts = () => {
     const [posts, setPosts] = useState([]);
@@ -28,7 +29,7 @@ export const Posts = () => {
             </div>
             <br/>
             <div style={{minHeight: '60px', color: 'black'}}>
-                {post.intro}
+                <ReactMarkdown>{post.intro}</ReactMarkdown>
             </div>
           </div>
         ))}
