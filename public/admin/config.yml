@@ -3,7 +3,7 @@ backend:
   name: github
   repo: billycrid/paigntoncc
   branch: main
-  # open_authoring: true
+  open_authoring: true
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
