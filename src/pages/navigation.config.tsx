@@ -55,7 +55,7 @@ export const NavigationConfig: INavigationConfig[] = [{
     "name": "Shop",
     "route": "/shop",
     "description": "",
-    "externalLink": "https://www.devoncountysports.com/Club-Shop/Paignton-CC-Clothing"
+    "externalLink": "https://vx-3.com/collections/paignton-cricket-club"
 }, {
     "name": "Club Hire",
     "route": "/club-hire",

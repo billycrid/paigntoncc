@@ -64,19 +64,6 @@ export const Home = () => {
                 <div>
                     <div className="Title">
                         <h4>
-                            <a target="_blank" rel="noreferrer" href="https://twitter.com/paigntoncricket?lang=en-GB">
-                            FOLLOW US ON TWITTER!
-                            </a>
-                        </h4>
-                    </div>
-                    <div>
-                        <TwitterPosts />
-                    </div>
-                </div>
-                <br/>
-                <div>
-                    <div className="Title">
-                        <h4>
                             <a target="_blank" rel="noreferrer" href="https://www.facebook.com/paignontcc">
                                 JOIN US ON FACEBOOK!
                             </a>
@@ -84,6 +71,19 @@ export const Home = () => {
                     </div>
                     <div>
                         <FacebookPosts />
+                    </div>
+                </div>
+                <br/>
+                <div>
+                    <div className="Title">
+                        <h4>
+                            <a target="_blank" rel="noreferrer" href="https://twitter.com/paigntoncricket?lang=en-GB">
+                            FOLLOW US ON TWITTER!
+                            </a>
+                        </h4>
+                    </div>
+                    <div>
+                        <TwitterPosts />
                     </div>
                 </div>
                 <br/>
