@@ -1,0 +1,37 @@
+.resultHeader {
+    background-color: #B1B1B1;
+    color: white;
+    padding: 15px;
+    height: 50px;
+}
+
+.resultHeader {
+    font-family: 'Oswald', sans-serif;
+}
+
+.Card .table {
+    border: 0;
+    border-left-width: 0;
+    margin: 0 -0.083em 2.083em 0;
+    width: 100%;
+}
+
+.Card .table td {
+    border: 0;
+    padding: 5px;
+}
+
+.fonts-gt {
+    font-family: 'Oswald', sans-serif;
+    font-weight: normal;
+}
+
+.externalLink {
+    text-align: center;
+    margin: auto;
+}
+
+.paignton-button { 
+    background-color: #CC0000 !important;
+    font-family: 'Oswald', sans-serif !important;
+}

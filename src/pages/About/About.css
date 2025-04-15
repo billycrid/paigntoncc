@@ -1,0 +1,8 @@
+.MiniAbout span {
+    font-size: 12px;
+    display: inline-block;
+}
+
+.MiniAbout h4 {
+    border-bottom: 2px solid #666;
+}

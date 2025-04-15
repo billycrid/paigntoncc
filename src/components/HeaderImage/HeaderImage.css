@@ -1,0 +1,55 @@
+.HeaderImage {
+    width: 100%;
+    min-width: 100%;
+    height: 100%;
+}
+
+.SiteLogo {
+    min-height: 70px;
+    padding: 20px 20px;
+    float: left;
+    line-height: normal;
+}
+
+@media (max-width: 801px) {
+  .SiteLogo {
+    text-align: center;
+    float: unset;
+  }
+
+  .SiteLogo img {
+    width: 80%;
+  }
+
+  .Socials {
+    position: unset !important;
+    display: grid;
+    text-align: center;
+    margin: 0 auto;
+    margin-right: 0;
+  }
+}
+
+.Socials {
+  position: relative;
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.Socials ul {
+  list-style: none;
+}
+
+.Socials li {
+  float: left;
+  padding: 0 5px;
+  position: relative;
+}
+
+.Socials .fa {
+  color: #999;
+}
+.Socials .fa:hover {
+  color: #333;
+}

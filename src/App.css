@@ -1,0 +1,85 @@
+.Wrapper {
+  background-color: black;
+  width: 85%;
+  margin: 10px auto;
+  border-top: 8px solid #CC0000;
+}
+
+@media (max-width: 801px) {
+  .Wrapper {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .Wrapper {
+    width: 70%;
+  }
+} 
+
+.Header {
+  background-color: white;
+  min-height: 160px;
+  display: grid;
+}
+
+.Content {
+  background-color: white;
+  min-height: 250px;
+  margin-top: -22px
+}
+
+.Footer {
+  color: white;
+  background-color: #333;
+  min-height: 50px;
+  border-top: 4px solid #CC0000;
+  font-family: 'Oswald', sans-serif;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: local('Oswald'), url(./fonts/Oswald-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Oswald';
+    font-weight: 900;
+    src: local('Oswald'), url(./fonts/Oswald-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Oswald';
+    font-weight: 900;
+    src: local('Oswald'), url(./fonts/Oswald-SemiBold.ttf) format('truetype');
+}
+
+.site-info {
+    font-size: 1.2rem;
+    padding: 1.5em 0;
+    text-align: center;
+    color: #808080;
+    background-color: #202020;
+    font-family: 'Oswald', sans-serif;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  color: #AAA;
+}
+
+.flex-item {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  flex: 33.33%;
+}
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}

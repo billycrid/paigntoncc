@@ -1,0 +1,18 @@
+{
+    "name": "Paignton Cricket Club",
+    "description": "",
+    "googleDriveGallery": "https://...",
+    "socials": [{
+        "type": "Facebook",
+        "url": "https://...."
+    }, {
+        "type": "Twitter",
+        "url": "https://...."
+    }, {
+        "type": "Instagram",
+        "url": "https://...."
+    }, {
+        "type": "Instagram",
+        "url": "https://...."
+    }]
+}

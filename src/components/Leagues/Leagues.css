@@ -1,0 +1,54 @@
+.leagueHeader {
+    background-color: #B1B1B1;
+    color: white;
+    padding: 15px;
+    height: 50px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.leagueSelection {
+    display: flex;
+    float: right;
+    color: black;
+    padding: 10px;
+}
+
+.leagueSelection select {
+    margin-left: 10px;
+}
+
+.leagueTable {
+    padding-top: 50px;
+    color: black
+}
+
+.leagueTable tbody{
+    width: 100%;
+    display: table;
+}
+
+.leagueTable table {
+    display: block;
+}
+
+.leagueTable h5 {
+    font-family: 'Oswald', sans-serif;
+}
+
+.flex-item-left-mid {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  flex: 55%;
+}
+
+.flex-item-right-mid {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  flex: 45%;
+}
+
+.tableStandings tr {
+    text-transform: capitalize;
+}

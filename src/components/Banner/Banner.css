@@ -1,0 +1,40 @@
+.Banner {
+    min-height: 180px;
+    background-color: #CC0000;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.Banner h1 {
+    padding-top: 50px;
+}
+
+.Banner h1 a:hover {
+    color: white;
+}
+
+.AvailableButton {
+    color: #FFF;
+    background-color: #CC0000;
+    padding: 4px 12px;
+    border-radius: 0.2em;
+    margin: 0 8px;
+    display: inline-block;
+}
+
+.LiveStreaming {
+    float: right;
+    margin-top: -120px;
+    margin-right: 30px;
+}
+
+@media (max-width: 801px) {
+
+    .LiveStreaming {
+        float: left;
+    }
+
+}
