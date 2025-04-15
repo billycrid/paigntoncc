@@ -2,52 +2,55 @@ import React from 'react';
 import { Banner } from '../../components/Banner/Banner.tsx';
 import './Home.css';
 import { PDFViewer } from '../../components/PDFViewer/PDFViewer.tsx';
-import {Helmet} from "react-helmet";
+import { Helmet } from "react-helmet";
 import { TwitterPosts } from '../../components/TwitterPosts/TwitterPosts.tsx';
-import {FacebookPosts} from '../../components/FacebookPosts/FacebookPosts.tsx';
+import { FacebookPosts } from '../../components/FacebookPosts/FacebookPosts.tsx';
 import { Sponsers } from '../../components/Sponsers/Sponsers.tsx';
+import { Posts } from '../../components/Posts/Posts.tsx';
+
 
 export const Home = () => {
-    return <div style={{marginTop: '22px'}}>
+    return <div style={{ marginTop: '22px' }}>
         <Helmet>
             <meta charSet="utf-8" />
             <title>Paignton Cricket Club</title>
             <link href="/" />
         </Helmet>
         <Banner />
-        <br/>
+        <br />
         <div className="flex-container">
             <div className="flex-item-left">
+                <Posts />
                 <div>
                     <div className="TitleMain">
                         <h4>
                             <a href="/news">
-                            CHAIRMAN’S REPORT – 2024
+                                CHAIRMAN’S REPORT – 2024
                             </a>
                         </h4>
                     </div>
-                    <br/>
+                    <br />
                     <PDFViewer route="PDFS/PCC-Chairmans-Report-2024.pdf" />
                     <div className='continueReading'>
                         <a href="/PDFS/PCC-Chairmans-Report-2024.pdf" target="_blank">Continue reading...</a>
                     </div>
                 </div>
-                <br/>
+                <br />
                 <div>
                     <div className="TitleMain">
                         <h4>
                             <a href="/news">
-                            CHAIRMAN’S REPORT – 2023
+                                CHAIRMAN’S REPORT – 2023
                             </a>
                         </h4>
                     </div>
-                    <br/>
+                    <br />
                     <PDFViewer route="PDFS/PCC-Chairmans-Report-2023.pdf" />
                     <div className='continueReading'>
                         <a href="/PDFS/PCC-Chairmans-Report-2023.pdf" target="_blank">Continue reading...</a>
                     </div>
                 </div>
-                <br/>
+                <br />
                 <div>
                     <div className="TitleMain ">
                         <h4>
@@ -73,12 +76,12 @@ export const Home = () => {
                         <FacebookPosts />
                     </div>
                 </div>
-                <br/>
+                <br />
                 <div>
                     <div className="Title">
                         <h4>
                             <a target="_blank" rel="noreferrer" href="https://twitter.com/paigntoncricket?lang=en-GB">
-                            FOLLOW US ON TWITTER!
+                                FOLLOW US ON TWITTER!
                             </a>
                         </h4>
                     </div>
@@ -86,7 +89,7 @@ export const Home = () => {
                         <TwitterPosts />
                     </div>
                 </div>
-                <br/>
+                <br />
                 <div>
                     <div className="Title">
                         <h4>

@@ -2,6 +2,7 @@ import React from 'react';
 import '../Shared/Shared.css';
 import {Helmet} from "react-helmet";
 import ReactGA from 'react-ga';
+import { Posts } from '../../components/Posts/Posts.tsx';
 
 export const News = () => {
     const readNews = (name) => {
@@ -16,6 +17,10 @@ export const News = () => {
             <title>News - Paignton Cricket Club</title>
             <link href="/news" />
         </Helmet>
+        <h3 className="ContentTitle">PAIGNTON NEWS POSTS!</h3>
+        <div className="entry-content">
+            <Posts />
+        </div>
         <h3 className="ContentTitle">PAIGNTON NEWS & REPORTS!</h3>
         <div className="entry-content">
             <ul>

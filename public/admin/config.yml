@@ -1,0 +1,21 @@
+publish_mode: editorial_workflow
+backend:
+  name: github
+  repo: billycrid/paigntoncc
+  branch: main
+  # open_authoring: true
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "homepage"
+    label: "Home Page Content"
+    label_singular: "Post"
+    folder: "src/content/home-posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Headline", name: "headline", widget: "string" }
+      - { label: "Intro Text", name: "intro", widget: "text" }
+      - { label: "CTA Link", name: "cta_link", widget: "string" }
