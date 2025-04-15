@@ -7,6 +7,7 @@ import { OnesMap } from '../components/Locations/OnesMap.tsx';
 import { ThreesMap } from '../components/Locations/ThreesMap.tsx';
 import CookieConsent from "react-cookie-consent";
 import { Sponsers } from '../components/Sponsers/Sponsers.tsx';
+import { AdBanner } from '../components/AdBanner/AdBanner.tsx';
 
 export const Layout = ({ ...props }) => {
     return <div className="Wrapper">
@@ -34,6 +35,8 @@ export const Layout = ({ ...props }) => {
         Paignton Cricket Club
         <hr/>
         <Sponsers isSmall={true} />
+        <hr/>
+        <AdBanner />
       </div>
     </footer>
 </div>

@@ -7,6 +7,7 @@ import { TwitterPosts } from '../../components/TwitterPosts/TwitterPosts.tsx';
 import { FacebookPosts } from '../../components/FacebookPosts/FacebookPosts.tsx';
 import { Sponsers } from '../../components/Sponsers/Sponsers.tsx';
 import { Posts } from '../../components/Posts/Posts.tsx';
+import { AdBanner } from '../../components/AdBanner/AdBanner.tsx';
 
 
 export const Home = () => {
@@ -101,6 +102,8 @@ export const Home = () => {
                     </div>
                     <div>
                         <Sponsers />
+                        <hr/>
+                        <AdBanner type={'verti'} />
                     </div>
                 </div>
             </div>
