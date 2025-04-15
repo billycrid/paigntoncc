@@ -43,23 +43,23 @@ export const Membership = () => {
             </tr>
             <tr>
               <td>Player & Family</td>
-              <td>£130 (incl polo top)</td>
-            </tr>
-            <tr>
-              <td>Player & Family</td>
-              <td>£130 (incl polo top)</td>
+              <td>£130</td>
             </tr>
             <tr>
               <td>Player</td>
-              <td>£100 (incl polo top)</td>
+              <td>£100</td>
             </tr>
             <tr>
               <td>Lady Hardball Player</td>
-              <td>£50 (incl polo top)</td>
+              <td>£50</td>
             </tr>
             <tr>
-              <td>Lady Softball (incl Wine and Wickets)</td>
-              <td>£25</td>
+              <td>Lady Softball</td>
+              <td>£30</td>
+            </tr>
+            <tr>
+              <td>Lady Wine and Wickets</td>
+              <td>£10</td>
             </tr>
             <tr>
               <td>Social Member</td>
