@@ -36,7 +36,7 @@ export const Layout = ({ ...props }) => {
         <hr/>
         <Sponsers isSmall={true} />
         <hr/>
-        <AdBanner />
+        <AdBanner type={'hori'} />
       </div>
     </footer>
 </div>
