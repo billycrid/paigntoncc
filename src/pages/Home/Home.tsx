@@ -5,9 +5,9 @@ import { PDFViewer } from '../../components/PDFViewer/PDFViewer.tsx';
 import { Helmet } from "react-helmet";
 import { TwitterPosts } from '../../components/TwitterPosts/TwitterPosts.tsx';
 import { FacebookPosts } from '../../components/FacebookPosts/FacebookPosts.tsx';
-import { Sponsers } from '../../components/Sponsers/Sponsers.tsx';
 import { Posts } from '../../components/Posts/Posts.tsx';
 import { AdBanner } from '../../components/AdBanner/AdBanner.tsx';
+import { SponsorsVerticle } from '../../components/SponsorsV2/Sponsors.tsx';
 
 
 export const Home = () => {
@@ -101,7 +101,7 @@ export const Home = () => {
                         </h4>
                     </div>
                     <div>
-                        <Sponsers />
+                        <SponsorsVerticle />
                         <hr/>
                         <AdBanner type={'verti'} />
                     </div>
