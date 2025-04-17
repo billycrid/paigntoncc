@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import './Sponsors.css';
 import { useSponsors } from '../../hooks/useSponsors.ts';
 
@@ -41,9 +41,19 @@ export const BecomeASponsor = () => {
 export const SponsorsVerticle = () => {
   const { sponsors } = useSponsors();
   const shuffled = [...sponsors].sort(() => Math.random() - 0.5);
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Force reflow to "kick" animation
+    if (scrollRef.current) {
+      scrollRef.current.style.animation = 'none';
+      void scrollRef.current.offsetHeight; // trigger reflow
+      scrollRef.current.style.animation = '';
+    }
+  }, []);
   return <div>
     <div className="sponsor-sidebar">
-      <div className="sponsor-scroll">
+      <div className="sponsor-scroll" ref={scrollRef}>
         <SponsorCard sponsors={shuffled} verticle={true} />
       </div>
     </div>
@@ -54,8 +64,18 @@ export const SponsorsVerticle = () => {
 export const SponsorHorizontal = () => {
   const { sponsors } = useSponsors();
   const shuffled = [...sponsors].sort(() => Math.random() - 0.5);
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Force reflow to "kick" animation
+    if (scrollRef.current) {
+      scrollRef.current.style.animation = 'none';
+      void scrollRef.current.offsetHeight; // trigger reflow
+      scrollRef.current.style.animation = '';
+    }
+  }, []);
   return <div><div className="sponsor-footer">
-    <div className="sponsor-track">
+    <div className="sponsor-track" ref={scrollRef}>
       <SponsorCard sponsors={shuffled} horizontal={true} isSmall={true} />
     </div>
   </div><BecomeASponsor />
@@ -66,7 +86,8 @@ export const SponsorsPage = () => {
   const { clubSponsors, playerSponsors } = useSponsors();
   return (
     <div>
-      <p>Paignton Cricket Club would like to say a huge thank you to all our sponsors for the 2025/2026 season! If you would like to find out how you can get involved with PCC or if you wish to <BecomeASponsor />, please feel free to get in touch <a href={mailto}>here.</a></p>
+      <p>Paignton Cricket Club would like to say a huge thank you to all our sponsors for the 2025/2026 season! If you would like to find out how you can get involved with PCC or wish to become a sponsor, please feel free to get in touch <a href={mailto}>here.</a></p>
+      <BecomeASponsor />
       <section className="Sponsors">
         <h3 className="ContentTitle">CLUB SPONSORS!</h3>
         <SponsorCard sponsors={clubSponsors} />

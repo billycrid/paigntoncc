@@ -1,113 +1,131 @@
 .Sponsors {
-    margin-left: -15px;
+  margin-left: -15px;
   margin-right: -15px;
 }
 .SponsorList {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; /* even horizontal spacing */
-    gap: 2rem; /* spacing between rows and items */
-    padding: 1rem;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* even horizontal spacing */
+  gap: 2rem; /* spacing between rows and items */
+  padding: 1rem;
+}
 
-  .Small {
-    .logo {
-      height: 60px !important;
-      margin-bottom: 0 !important;
-    }
+.Small {
+  .logo {
+    height: 60px !important;
+    margin-bottom: 0 !important;
   }
-  
-  .SponsorCard {
-    cursor: pointer;
-    flex: 1 1 300px; /* grow, shrink, basis */
-    max-width: 300px;
-    min-width: 250px;
-    background: #CC0000;
-    border: 1px solid #eee;
-    border-radius: 12px;
-    padding: 1rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+}
 
-    /* max-height: 100px;
+.SponsorCard {
+  cursor: pointer;
+  flex: 1 1 300px; /* grow, shrink, basis */
+  max-width: 300px;
+  min-width: 250px;
+  background: #cc0000;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  /* max-height: 100px;
     max-width: 100%;
     object-fit: contain;
     margin: 0 auto;
     display: block; */
 
-    .logo {
-        height: 120px; /* consistent logo space */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 1rem;
-        transform: scale(1.5);
-    }
-  }
-  
-  h5 {
-    font-size: 1.4rem;
-  margin:
-0 0 0.2em;
-  font-family: 'Oswald', sans-serif;
-  color: white;
-  }
-
-  .sponsor-sidebar {
-    max-height: 750px; /* adjust as needed */
-    overflow: hidden;
-    position: relative;
-    background: #fff;
-    padding: 1rem;
-    border-radius: 8px;
-  }
-  
-  .sponsor-scroll {
+  .logo {
+    height: 120px; /* consistent logo space */
     display: flex;
-    flex-direction: column;
-    animation: scroll-up 60s linear infinite;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    transform: scale(1.5);
   }
-  
-  .sponsor-scroll img {
-    height: 60px;
-    margin: 1rem auto;
-    object-fit: contain;
-  }
-  
-  @keyframes scroll-up {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-100%); }
-  }
+}
 
-  .sponsor-footer {
-    overflow: hidden;
-    padding: 1rem 0;
-  }
-  
-  .sponsor-track {
-    display: inline-flex;
-    animation: scroll-left 60s linear infinite;
-  }
-  
-  .sponsor-footer img {
-    height: 50px;
-    margin: 0 1.5rem;
-    vertical-align: middle;
-    object-fit: contain;
-  }
-  
-  @keyframes scroll-left {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
-  }
+h5 {
+  font-size: 1.4rem;
+  margin: 0 0 0.2em;
+  font-family: "Oswald", sans-serif;
+  color: white;
+}
 
-  .sponsor-scroll:hover {
-    animation-play-state: paused;
+.sponsor-sidebar {
+  max-height: 750px; /* adjust as needed */
+  overflow: hidden;
+  position: relative;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.sponsor-scroll {
+  display: flex;
+  flex-direction: column;
+  will-change: transform;
+  -webkit-animation: scroll-up 60s linear infinite;
+  -moz-animation: scroll-up 60s linear infinite;
+  -ms-animation: scroll-up 60s linear infinite;
+  -o-animation: scroll-up 60s linear infinite;
+  animation: scroll-up 60s linear infinite;
+}
+
+.sponsor-scroll img {
+  height: 60px;
+  margin: 1rem auto;
+  object-fit: contain;
+}
+
+@keyframes scroll-up {
+  0% {
+    transform: translateY(0);
   }
-  
-  .sponsor-track:hover {
-    animation-play-state: paused;
+  100% {
+    transform: translateY(-100%);
   }
+}
+
+.sponsor-footer {
+  overflow: hidden;
+  padding: 1rem 0;
+}
+
+.sponsor-track {
+  display: inline-flex;
+  will-change: transform;
+  -webkit-animation: scroll-left 60s linear infinite;
+  -moz-animation: scroll-left 60s linear infinite;
+  -ms-animation: scroll-left 60s linear infinite;
+  -o-animation: scroll-left 60s linear infinite;
+  animation: scroll-left 60s linear infinite;
+  animation-delay: 5s;
+}
+
+.sponsor-footer img {
+  height: 50px;
+  margin: 0 1.5rem;
+  vertical-align: middle;
+  object-fit: contain;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.sponsor-scroll:hover {
+  animation-play-state: paused;
+}
+
+.sponsor-track:hover {
+  animation-play-state: paused;
+}
