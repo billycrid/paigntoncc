@@ -4,8 +4,8 @@ const ChairmansReport = () => {
   return (
     <div className="chairmans-report" style={{ margin: "40px", marginTop: '0', color: "#000", lineHeight: "1.6" }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
-        <img src="/tim.png" alt="Chairman Photo" style={{ maxHeight: "150px" }} />
-        <img src="/castle.png" alt="Paignton C.C. Logo" style={{ height: "150px" }} />
+        <img src="/tim.png" style={{ maxHeight: "150px" }} />
+        <img src="/castle.png" style={{ height: "150px" }} />
       </div>
 
       <div style={{ textAlign: "center", marginTop: "-100px" }}>
