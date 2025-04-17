@@ -22,12 +22,13 @@ const SponsorCard = ({ sponsors, horizontal = false, verticle = false, isSmall =
   </div>
 }
 
+
+const subject = encodeURIComponent("Sponsorship Enquiry – Paignton Cricket Club");
+const body = encodeURIComponent("Hi there,\n\nI'm interested in becoming a sponsor for the club. Could you please provide more details?\n\nThanks!");
+
+const mailto = `mailto:paigntoncricketclub@outlook.com?subject=${subject}&body=${body}`;
+
 export const BecomeASponsor = () => {
-  const subject = encodeURIComponent("Sponsorship Enquiry – Paignton Cricket Club");
-  const body = encodeURIComponent("Hi there,\n\nI'm interested in becoming a sponsor for the club. Could you please provide more details?\n\nThanks!");
-
-  const mailto = `mailto:paigntoncricketclub@outlook.com?subject=${subject}&body=${body}`;
-
   return (
     <div style={{ textAlign: 'center', marginTop: '2rem' }}>
       <a href={mailto}>
@@ -65,7 +66,7 @@ export const SponsorsPage = () => {
   const { clubSponsors, playerSponsors } = useSponsors();
   return (
     <div>
-      <p>Paignton Cricket Club would like to say a huge thank you to all our sponsors for the 2025/2026 season!</p>
+      <p>Paignton Cricket Club would like to say a huge thank you to all our sponsors for the 2025/2026 season! If you would like to find out how you can get involved with PCC or if you wish to <BecomeASponsor />, please feel free to get in touch <a href={mailto}>here.</a></p>
       <section className="Sponsors">
         <h3 className="ContentTitle">CLUB SPONSORS!</h3>
         <SponsorCard sponsors={clubSponsors} />
