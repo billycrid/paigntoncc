@@ -1,0 +1,12 @@
+.chairmans-report {
+    container-type: inline-size;
+}
+
+@container (max-width: 700px) {
+    .chair-title {
+      display: none !important;
+    }
+    .content {
+        margin-top: 0px !important;
+    }
+  }

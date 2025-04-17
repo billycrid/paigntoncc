@@ -1,14 +1,15 @@
 import React from "react";
+import './shared.css';
 
 const ChairmansReport = () => {
   return (
     <div className="chairmans-report" style={{ margin: "40px", marginTop: '0', color: "#000", lineHeight: "1.6" }}>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
+      <div className="chair-title" style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
         <img src="/tim.png" alt="Chairman" style={{ maxHeight: "150px" }} />
         <img src="/castle.png" alt="Paignton C.C. Logo" style={{ height: "150px" }} />
       </div>
 
-      <div style={{ textAlign: "center", marginTop: "-100px" }}>
+      <div className='content' style={{ textAlign: "center", marginTop: "-100px" }}>
         <h1 style={{ fontSize: "1.5em", textDecoration: "underline", fontWeight: "bold" }}>Consolidation and promotion</h1>
         <h2 style={{ fontSize: "1.2em", margin: "5px 0" }}>Chairman’s Report</h2>
         <h2 style={{ fontSize: "1.2em", margin: "5px 0" }}>April 2024</h2>
