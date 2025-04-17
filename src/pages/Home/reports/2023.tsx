@@ -9,7 +9,7 @@ const ChairmansReport = () => {
       </div>
 
       <div style={{ textAlign: "center", marginTop: "-100px" }}>
-        <h2 style={{ fontSize: "1.2em", margin: "5px 0" }}>Chairman’s Report</h2>
+      <h1 style={{ fontSize: "1.5em", textDecoration: "underline", fontWeight: "bold" }}>Chairman’s Report</h1>
         <h2 style={{ fontSize: "1.2em", margin: "5px 0" }}>March 2023</h2>
       </div>
 
