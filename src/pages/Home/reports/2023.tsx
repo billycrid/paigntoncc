@@ -9,9 +9,8 @@ const ChairmansReport = () => {
       </div>
 
       <div style={{ textAlign: "center", marginTop: "-100px" }}>
-        <h1 style={{ fontSize: "1.5em", textDecoration: "underline", fontWeight: "bold" }}>Consolidation and promotion</h1>
-        <h2 style={{ fontSize: "1.2em", margin: "5px 0" }}>Chairman’s Report</h2>
-        <h2 style={{ fontSize: "1.2em", margin: "5px 0" }}>April 2024</h2>
+      <h1 style={{ fontSize: "1.5em", textDecoration: "underline", fontWeight: "bold" }}>Chairman’s Report</h1>
+        <h2 style={{ fontSize: "1.2em", margin: "5px 0" }}>March 2023</h2>
       </div>
 
       <div style={{ fontStyle: "italic", textAlign: "center", margin: "30px 0", color: "#444" }}>
