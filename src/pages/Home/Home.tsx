@@ -1,13 +1,14 @@
 import React from 'react';
 import { Banner } from '../../components/Banner/Banner.tsx';
 import './Home.css';
-import { PDFViewer } from '../../components/PDFViewer/PDFViewer.tsx';
 import { Helmet } from "react-helmet";
 import { TwitterPosts } from '../../components/TwitterPosts/TwitterPosts.tsx';
 import { FacebookPosts } from '../../components/FacebookPosts/FacebookPosts.tsx';
 import { Posts } from '../../components/Posts/Posts.tsx';
 import { AdBanner } from '../../components/AdBanner/AdBanner.tsx';
 import { SponsorsVerticle } from '../../components/SponsorsV2/Sponsors.tsx';
+import ChairmansReport2024 from './reports/2024.tsx';
+import ChairmansReport2023 from './reports/2023.tsx';
 
 
 export const Home = () => {
@@ -31,7 +32,7 @@ export const Home = () => {
                         </h4>
                     </div>
                     <br />
-                    <PDFViewer route="PDFS/PCC-Chairmans-Report-2024.pdf" />
+                    <ChairmansReport2024 />
                     <div className='continueReading'>
                         <a href="/PDFS/PCC-Chairmans-Report-2024.pdf" target="_blank">Continue reading...</a>
                     </div>
@@ -46,7 +47,7 @@ export const Home = () => {
                         </h4>
                     </div>
                     <br />
-                    <PDFViewer route="PDFS/PCC-Chairmans-Report-2023.pdf" />
+                    <ChairmansReport2023 />
                     <div className='continueReading'>
                         <a href="/PDFS/PCC-Chairmans-Report-2023.pdf" target="_blank">Continue reading...</a>
                     </div>
