@@ -7,6 +7,7 @@ import { Teams } from './Teams/Teams.tsx';
 import { Contact } from "./Contact/Contact.tsx";
 import { ClubHire } from "./ClubHire/ClubHire.tsx";
 import { Membership } from "./Membership/Membership.tsx";
+import { Sponsors } from "./Sponsors/Sponsors.tsx";
 
 interface INavigationConfig {
     name: string;
@@ -46,6 +47,11 @@ export const NavigationConfig: INavigationConfig[] = [{
     "route": "/gallery",
     "description": "",
     "component": <Gallery />
+}, {
+    "name": "Sponsors",
+    "route": "/sponsors",
+    "description": "",
+    "component": <Sponsors />
 }, {
     "name": "Contact",
     "route": "/contact",

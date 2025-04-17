@@ -10,7 +10,7 @@ public_folder: "/uploads"
 
 collections:
   - name: "homepage"
-    label: "Home Page Content"
+    label: "Home Page & News Posts"
     label_singular: "Post"
     folder: "src/content/home-posts"
     create: true
@@ -19,3 +19,25 @@ collections:
       - { label: "Headline", name: "headline", widget: "string" }
       - { label: "Content", name: "intro", widget: "markdown" }
       - { label: "Content Header link", name: "cta_link", widget: "string" }
+  - name: "sponsors"
+    label: "Sponsors"
+    folder: "src/content/sponsors"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Sponsor Name", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Website", name: "website", widget: "text" }
+      - { label: "Logo Image", name: "logo", widget: "image" }
+      - { label: "Address", name: "address", widget: "text", required: false  }
+      - label: "Sponsoring"
+        name: "sponsoring"
+        widget: "select"
+        options:
+          - { label: "Club", value: "club" }
+          - { label: "Player", value: "player" }
+      - label: "Player Name"
+        name: "player_name"
+        widget: "string"
+        required: false
+        hint: "Only required if sponsoring a player"

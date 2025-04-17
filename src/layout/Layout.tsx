@@ -6,8 +6,8 @@ import { MiniAbout } from '../pages/About/MiniAbout.tsx';
 import { OnesMap } from '../components/Locations/OnesMap.tsx';
 import { ThreesMap } from '../components/Locations/ThreesMap.tsx';
 import CookieConsent from "react-cookie-consent";
-import { Sponsers } from '../components/Sponsers/Sponsers.tsx';
 import { AdBanner } from '../components/AdBanner/AdBanner.tsx';
+import { SponsorHorizontal } from '../components/SponsorsV2/Sponsors.tsx';
 
 export const Layout = ({ ...props }) => {
     return <div className="Wrapper">
@@ -34,7 +34,7 @@ export const Layout = ({ ...props }) => {
       <div className="site-info">
         Paignton Cricket Club
         <hr/>
-        <Sponsers isSmall={true} />
+        <SponsorHorizontal />
         <hr/>
         <AdBanner type={'hori'} />
       </div>
