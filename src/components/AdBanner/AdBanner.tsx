@@ -1,15 +1,20 @@
 import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 export const AdBanner = ({ type }) => {
     useEffect(() => {
         try {
-            (window.adsbygoogle = window.adsbygoogle || []).push({});
-        } catch (e) { }
+            if (typeof window !== "undefined" && window.adsbygoogle) {
+                (window.adsbygoogle = window.adsbygoogle || []).push({});
+            }
+        } catch (e) {
+            console.error("Adsense error", e);
+        }
     }, []);
 
     if (type === 'hori') {
         return (
-            <div style={{ marginTop: '2rem', textAlign: 'center' }}>
+            <div style={{ marginTop: '2rem', textAlign: 'center' }} key={type}>
                 <ins className="adsbygoogle"
                     style={{ display: 'block' }}
                     data-ad-client="ca-pub-4792294064157934"
@@ -19,11 +24,32 @@ export const AdBanner = ({ type }) => {
             </div>
         );
     } else {
-        return <ins className="adsbygoogle"
-            style={{ display: 'block' }}
-            data-ad-client="ca-pub-4792294064157934"
-            data-ad-slot="5357718558"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
+        return <div key={type}><ins className="adsbygoogle"
+        style={{ display: 'block' }}
+        data-ad-client="ca-pub-4792294064157934"
+        data-ad-slot="5357718558"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+            </div>
     }
+};
+
+export const AdBannerWithRefresh = ({ type }) => {
+    const location = useLocation();
+
+    useEffect(() => {
+        try {
+            if (typeof window !== "undefined") {
+                const ads = document.getElementsByClassName("adsbygoogle");
+                for (let i = 0; i < ads.length; i++) {
+                    ads[i].innerHTML = ''; // clear previous ad
+                }
+                (window.adsbygoogle = window.adsbygoogle || []).push({});
+            }
+        } catch (e) {
+            console.warn('Ad refresh error:', e);
+        }
+    }, [location.pathname]);
+
+    return <AdBanner type={type} />;
 };
