@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
 import { About } from "./About/About.tsx";
 import { Gallery } from "./Gallery/Gallery.tsx";
 import { Home } from "./Home/Home.tsx";
@@ -8,6 +8,7 @@ import { Contact } from "./Contact/Contact.tsx";
 import { ClubHire } from "./ClubHire/ClubHire.tsx";
 import { Membership } from "./Membership/Membership.tsx";
 import { Sponsors } from "./Sponsors/Sponsors.tsx";
+import {Matches} from './Matches/Matches.tsx';
 
 interface INavigationConfig {
     name: string;
@@ -41,7 +42,8 @@ export const NavigationConfig: INavigationConfig[] = [{
     "name": "Matches",
     "route": "/matches",
     "description": "",
-    "externalLink": "https://paignton.play-cricket.com/Matches"
+    "externalLink": "https://paignton.play-cricket.com/Matches",
+    "component": <Matches />
 }, {
     "name": "Gallery",
     "route": "/gallery",
