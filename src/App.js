@@ -7,22 +7,14 @@ import {
 } from "react-router-dom";
 import { Layout } from './layout/Layout.tsx';
 import { NavigationConfig } from './pages/navigation.config.tsx';
-import React, { useEffect } from 'react';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useLocation } from 'react-router-dom';
-import ReactGA from 'react-ga';
-const TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID;
-
-ReactGA.initialize(TRACKING_ID);
+import { PageTracker } from './PageTracker.tsx';
 
 function App() {
-  const location = useLocation();
-  useEffect(() => {
-    ReactGA.pageview(location.pathname + location.search);
-  }, [location.pathname, location.search]);
-  
   return (
     <Router>
+      <PageTracker />
       <Layout>
         <Routes>
           {NavigationConfig.map((nav, index) => {
