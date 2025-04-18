@@ -9,14 +9,16 @@ import { Layout } from './layout/Layout.tsx';
 import { NavigationConfig } from './pages/navigation.config.tsx';
 import React, { useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useLocation } from 'react-router-dom';
 import ReactGA from 'react-ga';
 const TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID;
 
 ReactGA.initialize(TRACKING_ID);
 
 function App() {
+  const location = useLocation();
   useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
+    ReactGA.pageview(location.pathname + location.search);
   }, []);
 
   return (

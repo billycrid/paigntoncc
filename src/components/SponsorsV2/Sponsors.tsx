@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import './Sponsors.css';
 import { useSponsors } from '../../hooks/useSponsors.ts';
+import ReactGA from 'react-ga';
 
 const SponsorCard = ({ sponsors, horizontal = false, verticle = false, isSmall = false }) => {
   const style = horizontal ? {
@@ -9,6 +10,11 @@ const SponsorCard = ({ sponsors, horizontal = false, verticle = false, isSmall =
   return <div className={`SponsorList ${isSmall && 'Small'}`} style={style}>
     {sponsors.map((sponsor, idx) => (
       <div key={idx} className="SponsorCard" onClick={() => {
+        ReactGA.event({
+          category: 'Sponsor',
+          action: 'Clicked sponsor logo',
+          label: sponsor.title || `Sponsor #${idx + 1}` // fallback in case no title
+        });
         window.open(sponsor.website, '_blank').focus();
       }}>
         {sponsor.logo && <><hr />
