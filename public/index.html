@@ -2,47 +2,102 @@
 <html lang="en">
   <head>
     <!-- 
-        Website created by Billy Criddle
-        on behalf of Paignton Cricket Club
-        billycrid@hotmail.co.uk 
-        @billycrid
+      Website created by Billy Criddle
+      for Paignton Cricket Club
+      Contact: billycrid@hotmail.co.uk | @billycrid 
     -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VNE2JSJKZ"></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4792294064157934" crossorigin="anonymous"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-    
-        gtag('config', 'G-4VNE2JSJKZ');
-    </script>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+
+    <!-- ✅ Charset & Viewport -->
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Paignton Cricket Club's mission is to provide the best possible facilities and a friendly environment for all of its members and visitors, and to promote cricketing opportunities for players of all ages and abilities.">
+
+    <!-- ✅ Theme and Branding -->
+    <meta name="theme-color" content="#007f3f" />
+    <meta name="author" content="Billy Criddle" />
+
+    <!-- ✅ SEO Meta Description -->
+    <meta name="description" content="Paignton Cricket Club provides cricket opportunities for all ages and abilities in Devon. Friendly, inclusive and community-driven cricket since 1852." />
+
+    <!-- ✅ Favicon and PWA Support -->
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>Paignton Cricket Club</title>
-    <meta name="twitter:creator" content="@paigntoncc">
-    <meta name="twitter:site" content="@paigntoncc">
-    <meta name="twitter:title" content="Paignton Cricket Club">
-    <meta name="twitter:description" content="Paignton Cricket Club's mission is to provide the best possible facilities and a friendly environment for all of its members and visitors, and to promote cricketing opportunities for players of all ages and abilities.">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta property="og:site_name" content="Paignton Cricket Club">
-    <meta property="og:url" content="http://www.paigntoncricketclub.co.uk/">
-    <meta property="og:description" content="Paignton Cricket Club's mission is to provide the best possible facilities and a friendly environment for all of its members and visitors, and to promote cricketing opportunities for players of all ages and abilities.">
-    <meta property="og:title" content="Paignton Cricket Club">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="en_GB">
-    <link rel="canonical" href="http://www.paigntoncricketclub.co.uk/">
-    <meta name="robots" content="max-image-preview:large">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style type="text/css">
-      .r-1b7u577 { display: none !important; }
+
+    <!-- ✅ Canonical URL -->
+    <link rel="canonical" href="https://www.paigntoncricketclub.co.uk/" />
+
+    <!-- ✅ Robots -->
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+
+    <!-- ✅ Title Tag -->
+    <title>Paignton Cricket Club | Community Cricket in Devon</title>
+
+    <!-- ✅ Open Graph (for Facebook & WhatsApp) -->
+    <meta property="og:title" content="Paignton Cricket Club" />
+    <meta property="og:description" content="Community cricket for all ages and abilities in Devon." />
+    <meta property="og:url" content="https://www.paigntoncricketclub.co.uk/" />
+    <meta property="og:site_name" content="Paignton Cricket Club" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_GB" />
+
+    <!-- ✅ Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Paignton Cricket Club" />
+    <meta name="twitter:description" content="Friendly, inclusive cricket for all in Devon." />
+    <meta name="twitter:site" content="@paigntoncc" />
+    <meta name="twitter:creator" content="@paigntoncc" />
+
+    <!-- ✅ Structured Data (LocalBusiness / SportsClub) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SportsOrganization",
+        "name": "Paignton Cricket Club",
+        "url": "https://www.paigntoncricketclub.co.uk",
+        "logo": "https://www.paigntoncricketclub.co.uk/favicon.ico",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Queens Park, Queens Road",
+          "addressLocality": "Paignton",
+          "postalCode": "TQ4 6AT",
+          "addressCountry": "GB"
+        },
+        "sport": "Cricket",
+        "memberOf": {
+          "@type": "SportsOrganization",
+          "name": "Devon Cricket"
+        }
+      }
+    </script>
+
+    <!-- ✅ Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <!-- ✅ Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VNE2JSJKZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-4VNE2JSJKZ');
+    </script>
+
+    <!-- ✅ Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4792294064157934"
+      crossorigin="anonymous"></script>
+
+    <!-- ✅ UI Bug Fix / Misc Styling -->
+    <style>
+      .r-1b7u577 {
+        display: none !important;
+      }
     </style>
   </head>
+
   <body>
+    <!-- Fallback for non-JS users -->
     <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <!-- React root -->
     <div id="root"></div>
   </body>
 </html>
