@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import { Layout } from './layout/Layout.tsx';
 import { NavigationConfig } from './pages/navigation.config.tsx';
-import React from 'react';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { PageTracker } from './PageTracker.tsx';
 
@@ -18,7 +18,7 @@ function App() {
       <Layout>
         <Routes>
           {NavigationConfig.map((nav, index) => {
-            return <Route key={`route_${index}`} exact path={nav.route} element={nav.component}/>
+            return <Route key={`route_${index}`} path={nav.route} element={nav.component}/>
           })}
           <Route
             path="*"

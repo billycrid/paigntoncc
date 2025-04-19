@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
 
 export const TwitterPosts = () => {

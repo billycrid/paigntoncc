@@ -1,11 +1,11 @@
-import React from 'react';
+
 import '../Shared/Shared.css';
 import {Helmet} from "react-helmet";
 import ReactGA from 'react-ga';
 import { Posts } from '../../components/Posts/Posts.tsx';
 
 export const News = () => {
-    const readNews = (name) => {
+    const readNews = (name: string) => {
         ReactGA.event({
             category: 'Read PDF',
             action: name

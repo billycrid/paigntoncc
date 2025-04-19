@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <!-- 
@@ -12,15 +12,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- ✅ Theme and Branding -->
-    <meta name="theme-color" content="#007f3f" />
+    <meta name="theme-color" content="#c00" />
     <meta name="author" content="Billy Criddle" />
 
     <!-- ✅ SEO Meta Description -->
     <meta name="description" content="Paignton Cricket Club is one of South Devon’s most welcoming cricket clubs, based in the heart of Torbay. While we're proudly rooted in Paignton, we welcome players, families, and supporters from across Torquay, Brixham, and the wider Devon cricket community. Paignton Cricket Club provides cricket opportunities for all ages and abilities in Devon. Friendly, inclusive and community-driven cricket since 1852." />
 
     <!-- ✅ Favicon and PWA Support -->
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="icon" href="/favicon.ico" />
+    
 
     <!-- ✅ Canonical URL -->
     <link rel="canonical" href="https://www.paigntoncricketclub.co.uk/" />
@@ -92,12 +92,8 @@
       }
     </style>
   </head>
-
   <body>
-    <!-- Fallback for non-JS users -->
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-
-    <!-- React root -->
     <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

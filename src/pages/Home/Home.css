@@ -1,5 +1,5 @@
 
-.flex-container {
+.flex-container-home {
     display: flex;
     flex-direction: row;
     text-align: left;
@@ -7,7 +7,7 @@
     min-width: 100%;
   }
   
-.flex-container h4 {
+.flex-container-home h4 {
   color: #AAA;
 }
 
@@ -45,7 +45,7 @@
   
   /* Responsive layout - makes a one column-layout instead of two-column layout */
   @container (max-width: 800px) {
-    .flex-container {
+    .flex-container-home {
       flex-direction: column-reverse;
     }
   }

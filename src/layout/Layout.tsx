@@ -1,4 +1,4 @@
-import React from 'react';
+
 import '../App.css';
 import { HeaderImage } from '../components/HeaderImage/HeaderImage.tsx';
 import { Navigation } from '../components/Navigation/Navigation.tsx';

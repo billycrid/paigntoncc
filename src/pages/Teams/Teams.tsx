@@ -1,4 +1,3 @@
-import React from "react";
 import '../Shared/Shared.css';
 import {Helmet} from "react-helmet";
 import { Juniors } from "../../components/Juniors/Juniors.tsx";

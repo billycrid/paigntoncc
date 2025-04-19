@@ -68,13 +68,14 @@
   flex-direction: row;
   text-align: left;
   color: #AAA;
+  flex-wrap: wrap;
 }
 
 .flex-item {
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
-  flex: 33.33%;
+  flex: 1 auto;
 }
 
 /* Responsive layout - makes a one column-layout instead of two-column layout */

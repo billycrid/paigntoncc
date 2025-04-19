@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Banner } from '../../components/Banner/Banner.tsx';
 import './Home.css';
 import { Helmet } from "react-helmet";
@@ -20,7 +20,7 @@ export const Home = () => {
         </Helmet>
         <Banner />
         <br />
-        <div className="flex-container">
+        <div className="flex-container-home">
             <div className="flex-item-left">
                 <Posts />
                 <div>

@@ -1,7 +1,13 @@
-import React, { useEffect } from 'react';
+import  { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
-export const AdBanner = ({ type }) => {
+declare global {
+    interface Window {
+      adsbygoogle: any[];
+    }
+}
+
+export const AdBanner = ({ type }: { type: string}) => {
     useEffect(() => {
         try {
             if (typeof window !== "undefined" && window.adsbygoogle) {
@@ -40,7 +46,7 @@ export const AdBanner = ({ type }) => {
     }
 };
 
-export const AdBannerWithRefresh = ({ type }) => {
+export const AdBannerWithRefresh = ({ type }: { type: string}) => {
     const location = useLocation();
 
     useEffect(() => {
