@@ -118,7 +118,7 @@ export const Home = () => {
                         </h4>
                     </div>
                     <div>
-                        <div className="gfm-embed" data-url="https://www.gofundme.com/f/nets-replacement-at-paignton-cricket-club/widget/large?sharesheet=fundraiser story&attribution_id=sl:9d13a37e-94c0-49c1-89a2-5bd771540d6a"></div><script defer src="https://www.gofundme.com/static/js/embed.js"></script>
+                    <div class="gfm-embed" data-url="https://www.gofundme.com/f/nets-replacement-at-paignton-cricket-club/widget/large?sharesheet=fundraiser sidebar&attribution_id=sl:9d13a37e-94c0-49c1-89a2-5bd771540d6a"></div><script defer src="https://www.gofundme.com/static/js/embed.js"></script>
                     </div>
                 </div>
             </div>
