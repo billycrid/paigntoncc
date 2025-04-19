@@ -4,7 +4,6 @@ import { nodePolyfills } from 'vite-plugin-node-polyfills';
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), 'VITE_');
-  console.log('VITE_GA_TRACKING_ID:', env.VITE_GA_TRACKING_ID);
   return {
     plugins: [react(), nodePolyfills()],
     define: {
