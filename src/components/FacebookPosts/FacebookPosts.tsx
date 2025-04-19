@@ -56,7 +56,7 @@ export const FacebookPosts = () => {
               rel="noopener noreferrer"
               style={{ color: '#1877f2', fontWeight: 'bold' }}
             >
-              Visit Paignton Conservative Club on Facebook
+              Visit Paignton Cricket Club on Facebook
             </a>
           </div>
         )}
