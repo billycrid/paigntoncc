@@ -10,6 +10,28 @@ import { SponsorsVerticle } from '../../components/SponsorsV2/Sponsors.tsx';
 import ChairmansReport2024 from './reports/2024.tsx';
 import ChairmansReport2023 from './reports/2023.tsx';
 
+import { useEffect } from "react";
+
+export const GoFundMeWidget = () => {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://www.gofundme.com/static/js/embed.js";
+    script.defer = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
+  return (
+    <div
+      className="gfm-embed"
+      data-url="https://www.gofundme.com/f/nets-replacement-at-paignton-cricket-club/widget/large?sharesheet=fundraiser sidebar&attribution_id=sl:9d13a37e-94c0-49c1-89a2-5bd771540d6a"
+    ></div>
+  );
+};
+
 
 export const Home = () => {
     return <div style={{ marginTop: '22px' }} className='inlineHomeContent'>
@@ -21,7 +43,7 @@ export const Home = () => {
         <Banner />
         <br />
         <div className="flex-container-home">
-            <div className="flex-item-left">
+            <div className="flex-item-left" style={{textAlign: 'justify'}}>
                 <Posts />
                 <div>
                     <div className="TitleMain">
@@ -76,6 +98,7 @@ export const Home = () => {
                     </div>
                     <div>
                         <FacebookPosts />
+                        <br/>
                         <AdBanner type={'small-verti'} />
                     </div>
                 </div>
@@ -117,9 +140,7 @@ export const Home = () => {
                             </a>
                         </h4>
                     </div>
-                    <div>
-                    <div className="gfm-embed" data-url="https://www.gofundme.com/f/nets-replacement-at-paignton-cricket-club/widget/large?sharesheet=fundraiser sidebar&attribution_id=sl:9d13a37e-94c0-49c1-89a2-5bd771540d6a"></div><script defer src="https://www.gofundme.com/static/js/embed.js"></script>
-                    </div>
+                    <GoFundMeWidget />
                 </div>
             </div>
         </div>
