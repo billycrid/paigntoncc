@@ -20,7 +20,7 @@ export const Home = () => {
         </Helmet>
         <Banner />
         <br />
-        <div className="flex-container">
+        <div className="flex-container-home">
             <div className="flex-item-left">
                 <Posts />
                 <div>
