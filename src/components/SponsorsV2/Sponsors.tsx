@@ -1,13 +1,13 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import './Sponsors.css';
-import { useSponsors } from '../../hooks/useSponsors.ts';
+import { TSponsor, useSponsors } from '../../hooks/useSponsors.ts';
 import ReactGA from 'react-ga';
 
-const SponsorCard = ({ sponsors, horizontal = false, verticle = false, isSmall = false }) => {
+const SponsorCard = ({ sponsors, horizontal = false, verticle = false, isSmall = false }: { horizontal?: boolean, isSmall?: boolean, verticle?: boolean, sponsors: TSponsor[] }) => {
   const style = horizontal ? {
     flexWrap: 'nowrap'
   } : verticle ? { justifyContent: 'center' } : {}
-  return <div className={`SponsorList ${isSmall && 'Small'}`} style={style}>
+  return <div className={`SponsorList ${isSmall && 'Small'}`} style={style as any}>
     {sponsors.map((sponsor, idx) => (
       <div key={idx} className="SponsorCard" onClick={() => {
         ReactGA.event({
@@ -15,14 +15,17 @@ const SponsorCard = ({ sponsors, horizontal = false, verticle = false, isSmall =
           action: 'Clicked sponsor logo',
           label: sponsor.title || `Sponsor #${idx + 1}` // fallback in case no title
         });
-        window.open(sponsor.website, '_blank').focus();
+        const newWindow = window.open(sponsor.website, '_blank');
+        if (newWindow) {
+          newWindow.focus();
+        }
       }}>
         {sponsor.logo && <><hr />
           <div className="logo">
             <img src={sponsor.logo} width={128} alt={sponsor.title} />
           </div></>}
         <hr />
-        <h5>{sponsor.title}</h5>
+        <h5 style={{color: 'white'}}>{sponsor.title}</h5>
       </div>
     ))}
   </div>

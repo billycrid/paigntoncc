@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import  { ReactNode } from "react";
 import { About } from "./About/About.tsx";
 import { Gallery } from "./Gallery/Gallery.tsx";
 import { Home } from "./Home/Home.tsx";

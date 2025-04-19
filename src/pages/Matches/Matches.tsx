@@ -1,4 +1,4 @@
-import React from 'react';
+
 import '../Shared/Shared.css';
 import './Matches.css';
 import {Helmet} from "react-helmet";

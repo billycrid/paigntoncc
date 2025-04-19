@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import './Navigation.css';
 import { NavigationConfig } from '../../pages/navigation.config.tsx';
 import { Link, useLocation } from "react-router-dom";
@@ -19,16 +19,16 @@ export const Navigation = () => {
         setOpen(!isOpen)
     }
 
-    return <div className="Navigation" onClick={!isOpen ? () => hamburgerClick() : null}>
+    return <div className="Navigation" onClick={!isOpen ? () => hamburgerClick() : undefined}>
         <ul>
             <div className="FullNavigation">{NavigationConfig.map((nav, index) => {
-                return <li key={`navigation_${nav.name}_${index}`} className={nav.route === location.pathname ? 'active' : null}>
+                return <li key={`navigation_${nav.name}_${index}`} className={nav.route === location.pathname ? 'active' : undefined}>
                     {nav.externalLink && <a rel="noreferrer" target="_blank" href={nav.externalLink}>{nav.name}</a>}
                     {!nav.externalLink && <Link to={`${nav.route}`}>{nav.name}</Link>}
                 </li>
             })}
             </div>
-            <div className={`miniDisplay ${isOpen ? 'responsive' : null }`}>
+            <div className={`miniDisplay ${isOpen ? 'responsive' : undefined }`}>
                 <li style={{display: isOpen ? 'none' : 'block'}} className="responseLi">
                     {currentPathName()}
                 </li>

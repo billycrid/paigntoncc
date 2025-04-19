@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Banner } from '../../components/Banner/Banner.tsx';
 import './Home.css';
 import { Helmet } from "react-helmet";

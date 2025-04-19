@@ -1,49 +1,54 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect, ReactNode } from "react";
 import ReactMarkdown from 'react-markdown';
 
-export const Posts = ({ children }) => {
-  const [posts, setPosts] = useState([]);
+export const Posts = ({ children }: { children?: ReactNode }) => {
+  const [posts, setPosts] = useState<any[]>([]);
 
   useEffect(() => {
     const loadPosts = async () => {
-      const context = require.context('../../content/home-posts', false, /\.json$/);
-      const loadedPosts = context.keys().filter((key) => {
-        return !key.includes('example-post')
-      }).map((key) => context(key));
-      setPosts(loadedPosts);
+      const modules = import.meta.glob('../../content/home-posts/*.json');
+      const importedPosts = await Promise.all(
+        Object.entries(modules).map(async ([path, importer]) => {
+          if (path.includes('example-post')) return null;
+          const mod: any = await importer();
+          return mod.default || mod;
+        })
+      );
+
+      // Filter out nulls from skipped example-posts
+      const filteredPosts = importedPosts.filter(Boolean);
+      setPosts(filteredPosts);
     };
 
     loadPosts();
   }, []);
 
-  if (posts.length === 0) {
-    return null;
-  }
+  if (posts.length === 0) return null;
 
   return (
     <div>
       {children}
       {children && <br />}
       {posts.map((post, index) => (
-        <div key={index} style={children && { padding: '16px', paddingTop: 0}}>
-          {children ? <h4>
-            <a href={post.cta_link}>
-              {post.headline}
-            </a>
-          </h4> : <div className="TitleMain">
+        <div key={index} style={children ? { padding: '16px', paddingTop: 0 } : {}}>
+          {children ? (
             <h4>
-              <a href={post.cta_link}>
-                {post.headline}
-              </a>
+              <a href={post.cta_link}>{post.headline}</a>
             </h4>
-          </div>}
+          ) : (
+            <div className="TitleMain">
+              <h4>
+                <a href={post.cta_link}>{post.headline}</a>
+              </h4>
+            </div>
+          )}
           <br />
           <div style={{ minHeight: '60px', color: 'black' }}>
             <ReactMarkdown>{post.intro}</ReactMarkdown>
           </div>
-          {children && index !== (posts.length - 1) && <hr/>}
+          {children && index !== posts.length - 1 && <hr />}
         </div>
       ))}
     </div>
   );
-}
+};

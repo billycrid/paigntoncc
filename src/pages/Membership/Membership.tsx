@@ -1,4 +1,4 @@
-import React from "react";
+
 import "../Shared/Shared.css";
 import { Helmet } from "react-helmet";
 import ReactGA from "react-ga";

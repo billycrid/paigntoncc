@@ -1,4 +1,4 @@
-import React from 'react';
+
 import '../../pages/Shared/Shared.css';
 
 export const Juniors = () => {
