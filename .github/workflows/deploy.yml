@@ -23,6 +23,8 @@ jobs:
 
       - name: Build project
         run: npm run build
+        env:
+          VITE_GA_TRACKING_ID: ${{ secrets.VITE_GA_TRACKING_ID }}
 
       - name: Sync to S3
         uses: jakejarvis/s3-sync-action@master
