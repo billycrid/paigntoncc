@@ -23,14 +23,20 @@ export const AdBanner = ({ type }) => {
                     data-full-width-responsive="true"></ins>
             </div>
         );
+    } else if (type === 'small-verti') {
+        return <div key={type}><ins className="adsbygoogle"
+        style={{display:'inline-block',width:'450px',height:'90px'}}
+        data-ad-client="ca-pub-4792294064157934"
+        data-ad-slot="2737759226"></ins>
+    </div>
     } else {
         return <div key={type}><ins className="adsbygoogle"
-        style={{ display: 'block' }}
-        data-ad-client="ca-pub-4792294064157934"
-        data-ad-slot="5357718558"
-        data-ad-format="auto"
-        data-full-width-responsive="true"></ins>
-            </div>
+            style={{ display: 'block' }}
+            data-ad-client="ca-pub-4792294064157934"
+            data-ad-slot="5357718558"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        </div>
     }
 };
 

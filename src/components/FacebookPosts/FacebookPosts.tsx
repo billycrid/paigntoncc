@@ -17,12 +17,12 @@ export const FacebookPosts = () => {
     }, [loaded]);
     
     return <div>
-        <div className="facebook-feed" style={{ display: "flex", justifyContent: "center", paddingBottom: failed ? '50%' : '140%' }}>
+        <div className="facebook-feed" style={{ display: "flex", justifyContent: "center", minHeight: failed ? '80px' : '500px' }}>
         {!failed && <iframe
             title="Facebook Page Feed"
             src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fpaignontcc&tabs=timeline&width=420&height=700&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&small_header=true&appId=553242433089128"
-            width="500"
-            height="700"
+            // width="500"
+            // height="700"
             style={{ border: "none", overflow: "hidden" }}
             scrolling="no"
             frameBorder="0"

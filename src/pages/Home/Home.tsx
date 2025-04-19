@@ -12,7 +12,7 @@ import ChairmansReport2023 from './reports/2023.tsx';
 
 
 export const Home = () => {
-    return <div style={{ marginTop: '22px' }}>
+    return <div style={{ marginTop: '22px' }} className='inlineHomeContent'>
         <Helmet>
             <meta charSet="utf-8" />
             <title>Paignton Cricket Club</title>
@@ -76,6 +76,7 @@ export const Home = () => {
                     </div>
                     <div>
                         <FacebookPosts />
+                        <AdBanner type={'small-verti'} />
                     </div>
                 </div>
                 <br />
@@ -103,8 +104,21 @@ export const Home = () => {
                     </div>
                     <div>
                         <SponsorsVerticle />
-                        <hr/>
+                        <br/>
                         <AdBanner type={'verti'} />
+                    </div>
+                </div>
+                <div>
+                    <div className="Title">
+                        <h4>
+                            {/* eslint-disable-next-line */}
+                            <a rel="noreferrer" href="#">
+                                DONATE!
+                            </a>
+                        </h4>
+                    </div>
+                    <div>
+                        <div className="gfm-embed" data-url="https://www.gofundme.com/f/nets-replacement-at-paignton-cricket-club/widget/large?sharesheet=fundraiser story&attribution_id=sl:9d13a37e-94c0-49c1-89a2-5bd771540d6a"></div><script defer src="https://www.gofundme.com/static/js/embed.js"></script>
                     </div>
                 </div>
             </div>

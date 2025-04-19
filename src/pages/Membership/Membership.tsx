@@ -150,15 +150,13 @@ export const Membership = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <h5 style={{ textAlign: 'center' }}>
+              <h5 style={{ textAlign: 'center', color: '#c00' }}>
                 CLICK HERE TO JOIN/RENEW
               </h5>
             </a>
             <br />
-            <br />
             <hr />
             <img alt="PCC Colts 2023" style={{ width: '100%' }} src={colts} />
-            <br />
             <br />
             <hr />
             <img alt="PCC Ladies Softball" style={{ width: '100%' }} src={softball} />
