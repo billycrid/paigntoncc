@@ -11,6 +11,7 @@ export const About = () => {
         </Helmet>
         <h3 className="ContentTitle">WELCOME TO THE PAIGNTON CRICKET CLUB!</h3>
         <div className="entry-content">
+            <p>Paignton Cricket Club is one of South Devon’s most welcoming cricket clubs, based in the heart of Torbay. While we're proudly rooted in Paignton, we welcome players, families, and supporters from across Torquay, Brixham, and the wider Devon cricket community</p>
             <p>The club’s mission is to provide the best possible facilities and a friendly environment for all of its members and visitors, and to promote cricketing opportunities for players of all ages and abilities.<br/>
             &nbsp;<br/>
             Our vision is to achieve long term, sustainable success, by working within our budget, and by developing and maintaining the success of our junior section.</p>

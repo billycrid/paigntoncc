@@ -7,7 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #eeeeee;
   background-image: url(./images/bg2.jpg);
-  background-position: left top;
+  background-position: left center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
