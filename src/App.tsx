@@ -11,6 +11,7 @@ import { NavigationConfig } from './pages/navigation.config.tsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { PageTracker } from './PageTracker.tsx';
 import { useSyncGoogleConsent } from './hooks/useSyncGoogleConsent.ts';
+import { Privacy } from './pages/Privacy/Privacy.tsx';
 
 function App() {
   useSyncGoogleConsent();
@@ -22,6 +23,7 @@ function App() {
           {NavigationConfig.map((nav, index) => {
             return <Route key={`route_${index}`} path={nav.route} element={nav.component}/>
           })}
+          <Route key={`route_privacy`} path={'/privacy'} element={<Privacy />}/>
           <Route
             path="*"
             element={<Navigate to="/" />}

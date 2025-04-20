@@ -68,9 +68,10 @@ export const Layout = ({ ...props }) => {
         </div>
       </div>
       <div className="site-info">
-        Paignton Cricket Club
-        <hr />
         <SponsorHorizontal />
+        <hr />
+        © 2025 Paignton Cricket Club <br/>
+        <a href="/privacy" style={{textDecoration: 'underline', fontSize: '1rem'}}>Privacy & Cookies</a>
         {hasConsent && <><hr /><AdBannerWithRefresh type={'hori'} /></>}
       </div>
     </footer>

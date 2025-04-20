@@ -1,0 +1,8 @@
+.privacyContent {
+  h1, h2, h3, h4 {
+    font-family: 'Oswald', serif;
+    margin-bottom: 5px;
+    border-bottom: 8px solid #CC0000;;
+    word-spacing: 2px;
+  }
+}
