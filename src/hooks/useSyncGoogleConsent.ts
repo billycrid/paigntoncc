@@ -1,7 +1,10 @@
 import { useEffect } from "react";
+import useCookieConsent from "./useCookieConsent";
 
 export const useSyncGoogleConsent = () => {
+  const hasConsent = useCookieConsent();
   useEffect(() => {
+    if (hasConsent) return;
     const consentButtonSelector = ".fc-button.fc-cta-consent";
 
     const onConsentClick = () => {
