@@ -1,10 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
 import './FacebookPosts.css';
+import useCookieConsent from '../../hooks/useCookieConsent';
+import { AcceptCookiesModal } from '../AcceptCookies/AcceptCookies';
 
 export const FacebookPosts = () => {
   const [loaded, setLoaded] = useState(false);
   const [failed, setFailed] = useState(false);
   const timeoutRef = useRef<number | null>(null);
+  const hasConsent = useCookieConsent();
 
   useEffect(() => {
     // Set timeout to detect iframe failure
@@ -18,6 +21,18 @@ export const FacebookPosts = () => {
       }
     };
   }, [loaded]);
+
+  
+  if (!hasConsent) {
+    return (
+      <div style={{ textAlign: "center", padding: "1rem" }}>
+        <p>This Facebook feed requires cookies to load.</p>
+        <span>
+          Please <AcceptCookiesModal inline={true} /> to view our latest posts.
+        </span>
+      </div>
+    );
+  }
 
   return (
     <div>

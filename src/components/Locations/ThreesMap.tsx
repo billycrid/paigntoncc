@@ -1,9 +1,24 @@
+import useCookieConsent from "../../hooks/useCookieConsent";
 
 
 export const ThreesMap = () => {
+    const hasConsent = useCookieConsent();
+
+    if (!hasConsent) {
+        return <div className="MiniAbout">
+            <h4 className="Title">TORRE VALLEY 3RD & 4TH TEAM</h4>
+            <span>Torre Valley North</span><br />
+            <span>Avenue Rd</span><br />
+            <span>Torquay</span><br />
+            <span>Devon</span><br />
+            <span>TQ2 5LQ</span><br /><br />
+            <span>Telephone: 01803 557715</span><br />
+            <span>Email: paigntoncricketclub@gmail.com</span>
+        </div>
+    }
     return <div className="MiniAbout">
         <h4 className="Title">TORRE VALLEY 3RD & 4TH TEAM</h4>
-        <iframe 
+        <iframe
             width="100%"
             title="map"
             height="300px"

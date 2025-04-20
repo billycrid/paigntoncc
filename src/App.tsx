@@ -10,8 +10,10 @@ import { NavigationConfig } from './pages/navigation.config.tsx';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { PageTracker } from './PageTracker.tsx';
+import { useSyncGoogleConsent } from './hooks/useSyncGoogleConsent.ts';
 
 function App() {
+  useSyncGoogleConsent();
   return (
     <Router>
       <PageTracker />
