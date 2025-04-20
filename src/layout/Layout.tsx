@@ -45,6 +45,7 @@ export const CookieBanner = () => {
 }
 
 export const Layout = ({ ...props }) => {
+  const hasConsent = useCookieConsent();
   return <div className="Wrapper">
     <header className="Header">
       <HeaderImage />
@@ -70,8 +71,7 @@ export const Layout = ({ ...props }) => {
         Paignton Cricket Club
         <hr />
         <SponsorHorizontal />
-        <hr />
-        <AdBannerWithRefresh type={'hori'} />
+        {hasConsent && <><hr /><AdBannerWithRefresh type={'hori'} /></>}
       </div>
     </footer>
   </div>
