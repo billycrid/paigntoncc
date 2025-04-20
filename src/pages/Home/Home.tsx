@@ -113,7 +113,7 @@ export const Home = () => {
                     </div>
                     <div>
                         <SponsorsVerticle />
-                        {hasConsent && <><br/><AdBanner type={'verti'} /></>}
+                        {hasConsent && <><br/><AdBanner type={'verti'} /><br/></>}
                     </div>
                 </div>
                 {hasConsent && <div>
