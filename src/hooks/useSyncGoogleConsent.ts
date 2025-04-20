@@ -1,5 +1,15 @@
 import { useEffect } from "react";
 
+declare global {
+  interface Window {
+    __tcfapi?: (
+      command: string,
+      version: number,
+      callback: (tcData: any, success: boolean) => void
+    ) => void;
+  }
+}
+
 export const useSyncGoogleConsent = () => {
   useEffect(() => {
     const trySyncConsent = () => {
@@ -10,7 +20,7 @@ export const useSyncGoogleConsent = () => {
       }
 
       // Request consent info from Google's CMP
-      window.__tcfapi("getTCData", 2, (tcData, success) => {
+      window.__tcfapi("getTCData", 2, (tcData: { eventStatus: string; gdprApplies: any; purpose: { consents: boolean[]; }; }, success: any) => {
         if (success && tcData.eventStatus === "tcloaded") {
           const hasConsent =
             tcData.gdprApplies &&
