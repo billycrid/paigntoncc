@@ -12,29 +12,28 @@ declare global {
 
 export const useSyncGoogleConsent = () => {
   useEffect(() => {
-    const trySyncConsent = () => {
+    const interval = setInterval(() => {
       if (typeof window.__tcfapi !== "function") {
-        // __tcfapi not available yet, try again
-        setTimeout(trySyncConsent, 500);
         return;
       }
 
-      // Request consent info from Google's CMP
-      window.__tcfapi("getTCData", 2, (tcData: { eventStatus: string; gdprApplies: any; purpose: { consents: boolean[]; }; }, success: any) => {
+      window.__tcfapi("getTCData", 2, (tcData: any, success: boolean) => {
+        console.log('in getTCData', success, tcData.eventStatus)
         if (success && tcData.eventStatus === "tcloaded") {
           const hasConsent =
             tcData.gdprApplies &&
             tcData.purpose?.consents?.[1] === true; // Purpose 1: storage access
-
+          console.log(tcData)
           if (hasConsent) {
-            // Set your own consent flags
+            console.log("✅ Synced Google CMP consent to CookieConsent");
             localStorage.setItem("CookieConsent", "true");
             document.cookie = "CookieConsent=true; path=/";
+            clearInterval(interval); // ✅ Stop polling once synced
           }
         }
       });
-    };
+    }, 500); // Poll every 500ms
 
-    trySyncConsent();
+    return () => clearInterval(interval); // Cleanup on unmount
   }, []);
 };
