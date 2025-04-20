@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
 declare global {
@@ -59,21 +59,13 @@ export const AdBanner = ({ type }: { type: string }) => {
 };
 
 export const AdBannerWithRefresh = ({ type }: { type: string }) => {
-  const location = useLocation();
-
-  useEffect(() => {
-    try {
-      const adElements = document.getElementsByClassName('adsbygoogle');
-      for (let i = 0; i < adElements.length; i++) {
-        adElements[i].removeAttribute('data-ad-loaded'); // allow re-init
-        adElements[i].innerHTML = ''; // clear previous ad
-      }
-
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
-    } catch (e) {
-      console.warn('Ad refresh error:', e);
-    }
-  }, [location.pathname]);
-
-  return <AdBanner type={type} />;
-};
+    const location = useLocation();
+    const [key, setKey] = useState(() => `${type}-${Date.now()}`);
+  
+    useEffect(() => {
+      setKey(`${type}-${Date.now()}`);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [location.pathname]);
+  
+    return <AdBanner key={key} type={type} />;
+  };
