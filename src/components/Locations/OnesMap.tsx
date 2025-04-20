@@ -1,6 +1,20 @@
-
+import useCookieConsent from "../../hooks/useCookieConsent";
 
 export const OnesMap = () => {
+    const hasConsent = useCookieConsent();
+
+    if (!hasConsent) {
+        return <div className="MiniAbout">
+        <h4 className="Title">PAIGNTON 1ST & 2ND TEAM</h4>
+            <span>Queens Park</span><br/>
+            <span>Queens Road</span><br/>
+            <span>Paignton</span><br/>
+            <span>Devon</span><br/>
+            <span>TQ4 6AT</span><br/><br/>
+            <span>Telephone: 01803 557715</span><br/>
+            <span>Email: paigntoncricketclub@gmail.com</span> 
+        </div>
+    }
     return <div className="MiniAbout">
         <h4 className="Title">PAIGNTON 1ST & 2ND TEAM</h4>
         <iframe 

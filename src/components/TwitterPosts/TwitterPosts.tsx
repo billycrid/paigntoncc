@@ -1,8 +1,11 @@
 import  { useEffect, useState } from 'react';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
+import useCookieConsent from '../../hooks/useCookieConsent';
+import { AcceptCookiesModal } from '../AcceptCookies/AcceptCookies';
 
 export const TwitterPosts = () => {
   const [showFallback, setShowFallback] = useState(false);
+  const hasConsent = useCookieConsent();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -11,6 +14,17 @@ export const TwitterPosts = () => {
 
     return () => clearTimeout(timer);
   }, []);
+
+  if (!hasConsent) {
+    return (
+      <div style={{ textAlign: "center", padding: "1rem" }}>
+        <p>This Twitter feed requires cookies to load.</p>
+        <span>
+          Please <AcceptCookiesModal inline={true} /> to view our latest posts.
+        </span>
+      </div>
+    );
+  }
 
   return (
     <div>

@@ -9,6 +9,7 @@ import { AdBanner } from '../../components/AdBanner/AdBanner.tsx';
 import { SponsorsVerticle } from '../../components/SponsorsV2/Sponsors.tsx';
 import ChairmansReport2024 from './reports/2024.tsx';
 import ChairmansReport2023 from './reports/2023.tsx';
+import useCookieConsent from '../../hooks/useCookieConsent.ts';
 
 export const GoFundMeWidget = () => {
   return (
@@ -19,6 +20,7 @@ export const GoFundMeWidget = () => {
 
 
 export const Home = () => {
+    const hasConsent = useCookieConsent();
     return <div style={{ marginTop: '22px' }} className='inlineHomeContent'>
         <Helmet>
             <meta charSet="utf-8" />
@@ -67,13 +69,13 @@ export const Home = () => {
                         </h4>
                     </div>
                     <div className="entry-content">
-                        <iframe width="100%" height="450" src="https://www.youtube.com/embed/videoseries?list=PLkHcL9kSQF3jH6vyn4tsUan79LlIMvxhq" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                        {hasConsent && <iframe width="100%" height="450" src="https://www.youtube.com/embed/videoseries?list=PLkHcL9kSQF3jH6vyn4tsUan79LlIMvxhq" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>}
                         <p>Paignton Cricket Club has recently partnered with NV Play to ensure as many games as possible are live streamed. Below, is a playlist containing all the recent Paignton Cricket Club Live streamed games. These games will include the ones streamed at home by us, as well as other venues around the League.</p>
                     </div>
                 </div>
             </div>
             <div className="flex-item-right rightSection">
-                <div>
+                {hasConsent && <><div>
                     <div className="Title">
                         <h4>
                             <a target="_blank" rel="noreferrer" href="https://www.facebook.com/paignontcc">
@@ -83,8 +85,7 @@ export const Home = () => {
                     </div>
                     <div>
                         <FacebookPosts />
-                        <br/>
-                        <AdBanner type={'small-verti'} />
+                        {hasConsent && <><br/><AdBanner type={'small-verti'} /></>}
                     </div>
                 </div>
                 <br />
@@ -100,7 +101,7 @@ export const Home = () => {
                         <TwitterPosts />
                     </div>
                 </div>
-                <br />
+                <br /></>}
                 <div>
                     <div className="Title">
                         <h4>
@@ -112,11 +113,10 @@ export const Home = () => {
                     </div>
                     <div>
                         <SponsorsVerticle />
-                        <br/>
-                        <AdBanner type={'verti'} />
+                        {hasConsent && <><br/><AdBanner type={'verti'} /></>}
                     </div>
                 </div>
-                <div>
+                {hasConsent && <div>
                     <div className="Title">
                         <h4>
                             {/* eslint-disable-next-line */}
@@ -126,7 +126,7 @@ export const Home = () => {
                         </h4>
                     </div>
                     <GoFundMeWidget />
-                </div>
+                </div>}
             </div>
         </div>
     </div>

@@ -1,11 +1,13 @@
-// PageTracker.tsx
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import ReactGA from 'react-ga';
 
 const TRACKING_ID = import.meta.env.VITE_GA_TRACKING_ID || '';
+const hasConsent = localStorage.getItem("CookieConsent") === "true";
 
-ReactGA.initialize(TRACKING_ID);
+if (hasConsent) {
+  ReactGA.initialize(TRACKING_ID);
+}
 
 export const PageTracker = () => {
   const location = useLocation();
