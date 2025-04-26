@@ -1,6 +1,5 @@
 .facebook-feed {
   position: relative;
-  padding-bottom: 140%; /* Adjust for aspect ratio */
   height: 0;
   overflow: hidden;
 }

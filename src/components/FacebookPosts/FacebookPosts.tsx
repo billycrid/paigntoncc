@@ -13,7 +13,7 @@ export const FacebookPosts = () => {
     // Set timeout to detect iframe failure
     timeoutRef.current = window.setTimeout(() => {
       if (!loaded) setFailed(true);
-    }, 1000); // You can adjust this timeout duration
+    }, 3000); // You can adjust this timeout duration
 
     return () => {
       if (timeoutRef.current !== null) {
@@ -35,13 +35,13 @@ export const FacebookPosts = () => {
   }
 
   return (
-    <div>
       <div
         className="facebook-feed"
         style={{
           display: 'flex',
           justifyContent: 'center',
           minHeight: failed ? '80px' : '500px',
+          paddingBottom: failed ? '100px' : '140%',
         }}
       >
         {!failed && (
@@ -76,6 +76,5 @@ export const FacebookPosts = () => {
           </div>
         )}
       </div>
-    </div>
   );
 };
