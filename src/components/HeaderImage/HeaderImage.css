@@ -47,9 +47,9 @@
   position: relative;
 }
 
-.Socials .fa {
-  color: #999;
+.Socials .fa-brands {
+  color: #AAA;
 }
-.Socials .fa:hover {
+.Socials .fa-brands:hover {
   color: #333;
 }
