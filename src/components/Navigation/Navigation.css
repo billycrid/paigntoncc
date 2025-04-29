@@ -64,7 +64,7 @@
     display: none;
 }
 
-@media (max-width: 1320px) {
+@media (max-width: 1460px) {
     .Navigation .icon {
         display: block;
         position: absolute;
