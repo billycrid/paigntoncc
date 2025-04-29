@@ -9,6 +9,7 @@ import { ClubHire } from "./ClubHire/ClubHire.tsx";
 import { Membership } from "./Membership/Membership.tsx";
 import { Sponsors } from "./Sponsors/Sponsors.tsx";
 import {Matches} from './Matches/Matches.tsx';
+import { FantasyRedirect } from "../components/Fantasy/Redirect.tsx";
 
 interface INavigationConfig {
     name: string;
@@ -74,11 +75,11 @@ export const NavigationConfig: INavigationConfig[] = [{
     "route": "/membership",
     "description": "",
     "component": <Membership />
+},
+{
+    "name": "Fantasy CC",
+    "route": "/fantasy",
+    "description": "",
+    "component": <FantasyRedirect />
 }
-// {
-//     "name": "Fantasy CC",
-//     "route": "/fantasy",
-//     "description": "",
-//     "externalLink": "https://paignton.fantasyclubcricket.co.uk/team-standings"
-// }
 ]
