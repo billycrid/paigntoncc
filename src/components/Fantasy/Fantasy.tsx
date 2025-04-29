@@ -11,13 +11,13 @@ export const FantasyLeaguePromo = () => {
             fontSize: "24px",
             fontWeight: "bold",
             marginBottom: "16px",
-            textAlign: 'center'
+            textAlign: 'center' as const
         },
         linkBig: {
             color: "#c20000",
             fontWeight: "bold",
             textDecoration: "none",
-            textAlign:'center'
+            textAlign:'center' as const
         },
         link: {
             color: "#c20000",
