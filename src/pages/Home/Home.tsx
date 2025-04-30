@@ -35,7 +35,7 @@ export const Home = () => {
                 <div>
                     <div className="TitleMain">
                         <h4>
-                            <a href="/news">
+                            <a href="/fantasy">
                                 Fantasy League!
                             </a>
                         </h4>
