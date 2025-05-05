@@ -18,11 +18,11 @@ export const Seniors = () => {
             </tr>
             <tr>
             <td><a href="https://paignton.play-cricket.com/Teams/223452" target="_blank" rel="noopener noreferrer">3rd XI</a></td>
-            <td><a href="https://paignton.play-cricket.com/player_stats/batting/4975469?rule_type_id=179" target="_blank" rel="noopener noreferrer"> Jon Robers</a></td>
+            <td><a href="https://paignton.play-cricket.com/player_stats/batting/4975469?rule_type_id=179" target="_blank" rel="noopener noreferrer"> Jon Roberts</a></td>
             </tr>
             <tr>
             <td><a href="https://paignton.play-cricket.com/Teams/256748" target="_blank" rel="noopener noreferrer">4th XI</a></td>
-            <td><a href="https://paignton.play-cricket.com/player_stats/batting/5347481?rule_type_id=179" target="_blank" rel="noopener noreferrer"> Jon Russel</a></td>
+            <td><a href="https://paignton.play-cricket.com/player_stats/batting/5347481?rule_type_id=179" target="_blank" rel="noopener noreferrer"> Jon Russell</a></td>
             </tr>
             <tr>
             <td><a href="http://paignton.play-cricket.com/website/team_widgets/227515" target="_blank" rel="noopener noreferrer">Womens 1st XI</a></td>
