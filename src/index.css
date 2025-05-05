@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url(./images/bg.png);
+  background-image: url('/images/bg.png');
   background-repeat: no-repeat;
   background-position: -100px; /* Shift image further left */
   background-size: auto 100vh;         /* fills full height of screen */
