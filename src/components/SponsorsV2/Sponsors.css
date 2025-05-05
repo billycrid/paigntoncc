@@ -17,12 +17,21 @@
   }
 }
 
-.SponsorCard {
+.SponsorCardbg {
+  background-image: url(./images/bg.png);
+  background-repeat: no-repeat;
+  background-position: -50px bottom;
+  background-size: auto 100%;
+  background-color: #0a0a23 !important;
+  -webkit-transform:scaleX(-1);
+  -moz-transform:scaleX(-1);
+  -ms-transform:scaleX(-1);
+  -o-transform:scaleX(-1);
+  transform:scaleX(-1);
   cursor: pointer;
   flex: 1 1 300px; /* grow, shrink, basis */
   max-width: 300px;
   min-width: 250px;
-  background: #cc0000;
   border-radius: 12px;
   padding: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -34,7 +43,7 @@
 	-moz-border-radius: 6px;
 	-webkit-border-radius: 6px;
 	border-radius: 6px;
-	-moz-box-shadow:
+	/* -moz-box-shadow:
 		0px 1px 1px rgba(000,000,000,0.5),
 		inset 1px 2px 0px rgba(255,255,255,0.4);
 	-webkit-box-shadow:
@@ -42,7 +51,7 @@
 		inset 1px 2px 0px rgba(255,255,255,0.4);
 	box-shadow:
 		0px 1px 1px rgba(000,000,000,0.5),
-		inset 1px 2px 0px rgba(255,255,255,0.4);
+		inset 1px 2px 0px rgba(255,255,255,0.4); */
 	text-shadow:
 		1px 1px 2px rgba(000,000,000,0.7),
 		0px 1px 0px rgba(255,255,255,0.4);
@@ -60,6 +69,18 @@
     justify-content: center;
     margin-bottom: 1rem;
     transform: scale(1.5);
+  }
+}
+
+.SponsorCard {
+  -webkit-transform:scaleX(-1);
+  -moz-transform:scaleX(-1);
+  -ms-transform:scaleX(-1);
+  -o-transform:scaleX(-1);
+  transform:scaleX(-1);
+
+  hr {
+    opacity: 0;
   }
 }
 

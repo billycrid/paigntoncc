@@ -78,12 +78,12 @@
     /* font-size: 16px; */
     /* font-size: 1.6rem; */
     margin-bottom: 5px;
-    border-bottom: 8px solid #333;
+    border-bottom: 8px solid #0a0a23;
     word-spacing: 2px;
   }
 
   .TitleMain h4 a {
-    background-color: #333;
+    background-color: #0a0a23;
     color: #FFF;
     padding: 5px;
     padding-right: 15px;

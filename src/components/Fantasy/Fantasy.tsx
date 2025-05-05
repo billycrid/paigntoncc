@@ -3,7 +3,7 @@ export const FantasyLeaguePromo = () => {
         container: {
             margin: "0 auto",
             padding: "0px 20px 0px 20px",
-            color: "#222",
+            color: "#0a0a23",
             lineHeight: "1.6",
         },
         heading: {

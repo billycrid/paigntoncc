@@ -9,7 +9,7 @@ const SponsorCard = ({ sponsors, horizontal = false, verticle = false, isSmall =
   } : verticle ? { justifyContent: 'center' } : {}
   return <div className={`SponsorList ${isSmall && 'Small'}`} style={style as any}>
     {sponsors.map((sponsor, idx) => (
-      <div key={idx} className="SponsorCard" onClick={() => {
+      <div key={idx} className="SponsorCardbg" onClick={() => {
         ReactGA.event({
           category: 'Sponsor',
           action: 'Clicked sponsor logo',
@@ -20,12 +20,14 @@ const SponsorCard = ({ sponsors, horizontal = false, verticle = false, isSmall =
           newWindow.focus();
         }
       }}>
+        <div className='SponsorCard'>
         {sponsor.logo && <><hr />
           <div className="logo">
             <img src={sponsor.logo} width={128} alt={sponsor.title} />
           </div></>}
         <hr />
         <h5 style={{color: 'white'}}>{sponsor.title}</h5>
+        </div>
       </div>
     ))}
   </div>
