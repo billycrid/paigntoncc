@@ -3,6 +3,8 @@
   width: 85%;
   margin: 10px auto;
   border-top: 8px solid #CC0000;
+  border-bottom: 8px solid #CC0000;
+  border-radius: 8px;
 }
 
 @media (max-width: 801px) {

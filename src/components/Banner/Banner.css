@@ -7,7 +7,7 @@
     position: relative;
     z-index: 1;
 
-    background-image: url('/images/bg.png');
+    background-image: url('/images/bg-clear.png');
     background-repeat: no-repeat;
     background-position: 0px bottom;
     background-size: auto 100%;
