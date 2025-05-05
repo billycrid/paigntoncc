@@ -12,5 +12,6 @@ export const Banner = () => {
                 label: `NOW AVAILABLE`
             });
         }} to='/membership'>NOW AVAILABLE</Link></h1>
+        <div className="bannerImage"></div>
     </div>
 }
