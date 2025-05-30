@@ -28,14 +28,6 @@ export const Seniors = () => {
             <td><a href="http://paignton.play-cricket.com/website/team_widgets/227515" target="_blank" rel="noopener noreferrer">Womens 1st XI</a></td>
             <td><a href="https://paignton.play-cricket.com/player_stats/batting/3603643?rule_type_id=179" target="_blank" rel="noopener noreferrer"> Charlotte Massey</a></td>
             </tr>
-            <tr>
-            <td><a href="http://paignton.play-cricket.com/website/team_widgets/128313" target="_blank" rel="noopener noreferrer">Twenty20</a></td>
-            <td>&nbsp;</td>
-            </tr>
-            <tr>
-            <td><a href="http://paignton.play-cricket.com/website/team_widgets/176291" target="_blank" rel="noopener noreferrer">Friendly XI</a></td>
-            <td>&nbsp;</td>
-            </tr>
         </tbody>
     </table>
 }
