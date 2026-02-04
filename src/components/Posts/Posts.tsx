@@ -49,14 +49,22 @@ export const Posts = ({ children, mode = 'teaser' }: { children?: ReactNode; mod
             <ReactMarkdown
               components={{
                 img: ({ src, alt }) => (
-                  <img src={src} alt={alt} style={{ width: '400px', display: 'block', margin: '0 auto' }} />
+                  <img src={src} alt={alt} style={{ width: '300px', display: 'block', margin: '0 auto' }} />
                 )
               }}
             >
               {mode === 'full' ? (post.full_content || post.intro) : (post.short_post || post.intro)}
             </ReactMarkdown>
           </div>
-          {children && index !== posts.length - 1 && <hr />}
+          {mode === 'teaser' && post.full_content && (
+            <>
+              <br />
+              <br />
+              <div className='continueReading'>
+                <a href={post.cta_link}>Continue reading...</a>
+              </div>
+            </>
+          )}          {children && index !== posts.length - 1 && <hr />}
         </div>
       ))}
     </div>
