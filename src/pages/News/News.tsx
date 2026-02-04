@@ -17,7 +17,7 @@ export const News = () => {
             <title>News - Paignton Cricket Club</title>
             <link href="/news" />
         </Helmet>
-        <Posts><h3 className="ContentTitle">PAIGNTON NEWS POSTS!</h3></Posts>
+        <Posts mode="full"><h3 className="ContentTitle">PAIGNTON NEWS POSTS!</h3></Posts>
         <h3 className="ContentTitle">PAIGNTON NEWS & REPORTS!</h3>
         <div className="entry-content">
             <ul>

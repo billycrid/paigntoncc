@@ -9,7 +9,6 @@ import { AdBanner } from '../../components/AdBanner/AdBanner.tsx';
 import { SponsorsVerticle } from '../../components/SponsorsV2/Sponsors.tsx';
 import ChairmansReport2024 from './reports/2024.tsx';
 import useCookieConsent from '../../hooks/useCookieConsent.ts';
-import { FantasyLeaguePromo } from '../../components/Fantasy/Fantasy.tsx';
 
 export const GoFundMeWidget = () => {
   return (
@@ -32,17 +31,7 @@ export const Home = () => {
         <div className="flex-container-home">
             <div className="flex-item-left" style={{textAlign: 'justify'}}>
                 <Posts />
-                <div>
-                    <div className="TitleMain">
-                        <h4>
-                            <a href="/fantasy">
-                                Fantasy League!
-                            </a>
-                        </h4>
-                    </div>
-                    <br />
-                    <FantasyLeaguePromo />
-                </div>
+                <br/>
                 <div>
                     <div className="TitleMain">
                         <h4>

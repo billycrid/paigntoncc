@@ -14,11 +14,11 @@ export const Seniors = () => {
             </tr>
             <tr>
             <td><a href="https://paignton.play-cricket.com/Teams/24329" target="_blank" rel="noopener noreferrer">2nd XI</a></td>
-            <td><a href="https://paignton.play-cricket.com/player_stats/batting/4918981?rule_type_id=179" target="_blank" rel="noopener noreferrer"> Neil Hancock</a></td>
+            <td><a href="https://paignton.play-cricket.com/player_stats/batting/5462174?rule_type_id=179" target="_blank" rel="noopener noreferrer"> Carl McFarlane</a></td>
             </tr>
             <tr>
             <td><a href="https://paignton.play-cricket.com/Teams/223452" target="_blank" rel="noopener noreferrer">3rd XI</a></td>
-            <td><a href="https://paignton.play-cricket.com/player_stats/batting/4975469?rule_type_id=179" target="_blank" rel="noopener noreferrer"> Jon Roberts</a></td>
+            <td><a href="https://paignton.play-cricket.com/player_stats/batting/4292413?rule_type_id=179" target="_blank" rel="noopener noreferrer"> Billy Criddle</a></td>
             </tr>
             <tr>
             <td><a href="https://paignton.play-cricket.com/Teams/256748" target="_blank" rel="noopener noreferrer">4th XI</a></td>
@@ -26,7 +26,7 @@ export const Seniors = () => {
             </tr>
             <tr>
             <td><a href="http://paignton.play-cricket.com/website/team_widgets/227515" target="_blank" rel="noopener noreferrer">Womens 1st XI</a></td>
-            <td><a href="https://paignton.play-cricket.com/player_stats/batting/3603643?rule_type_id=179" target="_blank" rel="noopener noreferrer"> Charlotte Massey</a></td>
+            <td><a href="https://paignton.play-cricket.com/player_stats/batting/4005923?rule_type_id=179" target="_blank" rel="noopener noreferrer"> Hollie Perkin</a></td>
             </tr>
         </tbody>
     </table>

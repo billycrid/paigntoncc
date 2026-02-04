@@ -1,7 +1,7 @@
 import { useState, useEffect, ReactNode } from "react";
 import ReactMarkdown from 'react-markdown';
 
-export const Posts = ({ children }: { children?: ReactNode }) => {
+export const Posts = ({ children, mode = 'teaser' }: { children?: ReactNode; mode?: 'teaser' | 'full' }) => {
   const [posts, setPosts] = useState<any[]>([]);
 
   useEffect(() => {
@@ -31,7 +31,9 @@ export const Posts = ({ children }: { children?: ReactNode }) => {
       {children && <br />}
       {posts.map((post, index) => (
         <div key={index} style={children ? { padding: '16px', paddingTop: 0 } : {}}>
-          {children ? (
+          {mode === 'full' ? (
+            <h4>{post.headline}</h4>
+          ) : children ? (
             <h4>
               <a href={post.cta_link}>{post.headline}</a>
             </h4>
@@ -43,8 +45,16 @@ export const Posts = ({ children }: { children?: ReactNode }) => {
             </div>
           )}
           <br />
-          <div style={{ minHeight: '60px', color: 'black' }}>
-            <ReactMarkdown>{post.intro}</ReactMarkdown>
+          <div style={mode === 'full' ? { color: 'black' } : { minHeight: '60px', color: 'black' }}>
+            <ReactMarkdown
+              components={{
+                img: ({ src, alt }) => (
+                  <img src={src} alt={alt} style={{ width: '400px', display: 'block', margin: '0 auto' }} />
+                )
+              }}
+            >
+              {mode === 'full' ? (post.full_content || post.intro) : (post.short_post || post.intro)}
+            </ReactMarkdown>
           </div>
           {children && index !== posts.length - 1 && <hr />}
         </div>
