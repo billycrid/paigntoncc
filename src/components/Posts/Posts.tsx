@@ -17,7 +17,9 @@ export const Posts = ({ children, mode = 'teaser' }: { children?: ReactNode; mod
 
       // Filter out nulls from skipped example-posts
       const filteredPosts = importedPosts.filter(Boolean);
-      setPosts(filteredPosts);
+      // Sort by date descending
+      const sortedPosts = filteredPosts.sort((a, b) => (new Date(b.date || '1970-01-01')).getTime() - (new Date(a.date || '1970-01-01')).getTime());
+      setPosts(sortedPosts);
     };
 
     loadPosts();
@@ -64,7 +66,7 @@ export const Posts = ({ children, mode = 'teaser' }: { children?: ReactNode; mod
                 <a href={post.cta_link}>Continue reading...</a>
               </div>
             </>
-          )}          {children && index !== posts.length - 1 && <hr />}
+          )}          {children && index !== posts.length - 1 && <hr style={{ margin: '50px 0', border: 'none', borderTop: '2px solid #ccc' }} />}
         </div>
       ))}
     </div>

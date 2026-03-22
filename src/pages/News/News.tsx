@@ -21,6 +21,7 @@ export const News = () => {
         <h3 className="ContentTitle">PAIGNTON NEWS & REPORTS!</h3>
         <div className="entry-content">
             <ul>
+                <li><a onClick={() => readNews('PCC Policy-2026.pdf')} href="/PDFS/PCC Policy-2026.pdf" target="_blank">PCC POLICY – 2026</a></li>
                 <li><a onClick={() => readNews('PCC-Chairmans-Report-2023.pdf')} href="/PDFS/PCC-Chairmans-Report-2023.pdf" target="_blank">CHAIRMAN’S REPORT – 2023</a></li>
                 <li><a onClick={() => readNews('PCC-Awards-Night-2022.pdf')} href="/PDFS/PCC-Awards-Night-2022.pdf" target="_blank">AWARDS NIGHT – 2022</a></li>
                 <li><a onClick={() => readNews('PCC-Chairmans-Report-2021.pdf')} href="/PDFS/PCC-Chairmans-Report-2021.pdf" target="_blank">CHAIRMAN’S REPORT – SPRING 2021</a></li>
